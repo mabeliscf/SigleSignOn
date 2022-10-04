@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "QRA.UseCases/1.0.0": {
+        "dependencies": {
+          "QRA.Entities": "1.0.0"
+        },
+        "runtime": {
+          "QRA.UseCases.dll": {}
+        }
+      },
+      "QRA.Entities/1.0.0": {
+        "runtime": {
+          "QRA.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "QRA.UseCases/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QRA.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

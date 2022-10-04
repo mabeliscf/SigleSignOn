@@ -1,0 +1,124 @@
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\appsettings.json
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\QRA.API.staticwebassets.runtime.json
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\QRA.API.exe
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\QRA.API.deps.json
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\QRA.API.runtimeconfig.json
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\QRA.API.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\QRA.API.pdb
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.csproj.AssemblyReference.cache
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.AssemblyInfoInputs.cache
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.AssemblyInfo.cs
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.csproj.CoreCompileInputs.cache
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\obj\Debug\net6.0\scopedcss\bundle\QRA.API.styles.css
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\obj\Debug\net6.0\refint\QRA.API.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.pdb
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.genruntimeconfig.cache
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\obj\Debug\net6.0\ref\QRA.API.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.csproj.CopyComplete
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.csproj.AssemblyReference.cache
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.AssemblyInfoInputs.cache
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.AssemblyInfo.cs
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.csproj.CoreCompileInputs.cache
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\appsettings.json
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\QRA.API.staticwebassets.runtime.json
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\QRA.API.exe
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\QRA.API.deps.json
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\QRA.API.runtimeconfig.json
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\QRA.API.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\QRA.API.pdb
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\QRA.Entities.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\QRA.Persistence.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\QRA.Persistence.pdb
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\QRA.Entities.pdb
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\obj\Debug\net6.0\scopedcss\bundle\QRA.API.styles.css
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.csproj.CopyComplete
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\obj\Debug\net6.0\refint\QRA.API.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.pdb
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\obj\Debug\net6.0\QRA.API.genruntimeconfig.cache
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\obj\Debug\net6.0\ref\QRA.API.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\QRA.UseCases.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.API\bin\Debug\net6.0\QRA.UseCases.pdb

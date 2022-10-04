@@ -1,0 +1,24 @@
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.Entities\bin\Debug\net6.0\QRA.Entities.deps.json
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.Entities\bin\Debug\net6.0\QRA.Entities.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.Entities\bin\Debug\net6.0\QRA.Entities.pdb
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.Entities\obj\Debug\net6.0\QRA.Entities.csproj.AssemblyReference.cache
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.Entities\obj\Debug\net6.0\QRA.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.Entities\obj\Debug\net6.0\QRA.Entities.AssemblyInfoInputs.cache
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.Entities\obj\Debug\net6.0\QRA.Entities.AssemblyInfo.cs
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.Entities\obj\Debug\net6.0\QRA.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.Entities\obj\Debug\net6.0\QRA.Entities.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.Entities\obj\Debug\net6.0\refint\QRA.Entities.dll
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.Entities\obj\Debug\net6.0\QRA.Entities.pdb
+C:\Users\Raemil Corniel\Documents\QRA challenge\QRA\QRA.Entities\obj\Debug\net6.0\ref\QRA.Entities.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.Entities\bin\Debug\net6.0\QRA.Entities.deps.json
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.Entities\bin\Debug\net6.0\QRA.Entities.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.Entities\bin\Debug\net6.0\QRA.Entities.pdb
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.Entities\obj\Debug\net6.0\QRA.Entities.csproj.AssemblyReference.cache
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.Entities\obj\Debug\net6.0\QRA.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.Entities\obj\Debug\net6.0\QRA.Entities.AssemblyInfoInputs.cache
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.Entities\obj\Debug\net6.0\QRA.Entities.AssemblyInfo.cs
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.Entities\obj\Debug\net6.0\QRA.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.Entities\obj\Debug\net6.0\QRA.Entities.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.Entities\obj\Debug\net6.0\refint\QRA.Entities.dll
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.Entities\obj\Debug\net6.0\QRA.Entities.pdb
+C:\Users\Raemil Corniel\Documents\QRAchallenge\QRA\QRA.Entities\obj\Debug\net6.0\ref\QRA.Entities.dll

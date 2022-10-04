@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "RV26IEiFrKzkY1IfTb6hmLOfkOvZNXIaQ+Mdke1mc6nPEbuAcUNzpBX4UGY9Ibhf+JyIsuVs8SbYT2sPTtJCOg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Raemil Corniel\\Documents\\QRAchallenge\\QRA\\QRA.Principal\\QRA.Principal.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Raemil Corniel\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512",
+    "C:\\Users\\Raemil Corniel\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Raemil Corniel\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Raemil Corniel\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
