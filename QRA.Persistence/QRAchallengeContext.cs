@@ -33,6 +33,8 @@ namespace QRA.Persistence
         public virtual DbSet<TenantsRole> TenantsRoles { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
         public virtual DbSet<UserRole> UserRoles { get; set; } = null!;
+        public virtual DbSet<Role> Roles { get; set; } = null!;
+
 
         #endregion
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -53,6 +55,7 @@ namespace QRA.Persistence
             modelBuilder.ConfigureTenantsRole();
             modelBuilder.ConfigureUser();
             modelBuilder.ConfigureUserRole();
+            modelBuilder.ConfigureRole();
 
 
             OnModelCreatingPartial(modelBuilder);

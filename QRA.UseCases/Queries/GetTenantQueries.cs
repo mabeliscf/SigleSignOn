@@ -1,4 +1,5 @@
-﻿using QRA.Entities.Entities;
+﻿using QRA.Entities.contracts;
+using QRA.Entities.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,12 @@ namespace QRA.UseCases.Queries
 {
     public class GetTenantQueries
     {
-      //  public static QRAchallengeContext _qr;
+       private readonly  IGenericRepository<Tenant> _repositoory;
 
-        public GetTenantQueries()//QRAchallengeContext qR)
-        {
-           // _qr = qR;
-        }
+        //public GetTenantQueries( repository)
+        //{
+        //   // _repository = repository;
+        //}
 
         //public Tenant getTenant()
         //{

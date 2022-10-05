@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lNUBGfNs+3Z8psEa4i7+BsfGbdILE8eYpgb8emW1SEq0zhE3ce21yTc/J0MH6tXNPhilqggzJoI3jwe50/Wr3A==",
+  "dgSpecHash": "v60J0DGFd3N4/MwDvVi6f4xCrj8QWxw/BOizvqC50oFznmEFWqs4SWiBoDK1Cx8Ar2TBpTBmr0xtI5GeHAHmMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Raemil Corniel\\Documents\\QRAchallenge\\QRA\\QRA.API\\QRA.API.csproj",
+  "projectFilePath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.API\\QRA.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Raemil Corniel\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Raemil Corniel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

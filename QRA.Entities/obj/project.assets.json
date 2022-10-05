@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Raemil Corniel\\Documents\\QRAchallenge\\QRA\\QRA.Entities\\QRA.Entities.csproj",
+      "projectUniqueName": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Entities\\QRA.Entities.csproj",
       "projectName": "QRA.Entities",
-      "projectPath": "C:\\Users\\Raemil Corniel\\Documents\\QRAchallenge\\QRA\\QRA.Entities\\QRA.Entities.csproj",
+      "projectPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Entities\\QRA.Entities.csproj",
       "packagesPath": "C:\\Users\\Raemil Corniel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Raemil Corniel\\Documents\\QRAchallenge\\QRA\\QRA.Entities\\obj\\",
+      "outputPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Raemil Corniel\\AppData\\Roaming\\NuGet\\NuGet.Config",

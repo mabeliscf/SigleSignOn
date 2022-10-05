@@ -6878,11 +6878,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Raemil Corniel\\Documents\\QRAchallenge\\QRA\\QRA.API\\QRA.API.csproj",
+      "projectUniqueName": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.API\\QRA.API.csproj",
       "projectName": "QRA.API",
-      "projectPath": "C:\\Users\\Raemil Corniel\\Documents\\QRAchallenge\\QRA\\QRA.API\\QRA.API.csproj",
+      "projectPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.API\\QRA.API.csproj",
       "packagesPath": "C:\\Users\\Raemil Corniel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Raemil Corniel\\Documents\\QRAchallenge\\QRA\\QRA.API\\obj\\",
+      "outputPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Raemil Corniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6899,8 +6899,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Raemil Corniel\\Documents\\QRAchallenge\\QRA\\QRA.Persistence\\QRA.Persistence.csproj": {
-              "projectPath": "C:\\Users\\Raemil Corniel\\Documents\\QRAchallenge\\QRA\\QRA.Persistence\\QRA.Persistence.csproj"
+            "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Persistence\\QRA.Persistence.csproj": {
+              "projectPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Persistence\\QRA.Persistence.csproj"
             }
           }
         }

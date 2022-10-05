@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FYcXsd/F8atB0jjTReM4JI94XCg5vJyE6PsloD9Bs3YBKkkswSwvp/796dCnPNRXLeKvzDy3jn7WTbfOHGZi3w==",
+  "dgSpecHash": "99lPUnnWs2My5JDWPOHbLRS8In4kxw13I8tQRpNKgXQyzmFQ+PnnG2raQTrH5HgbmcYJUeqjdDxMPesTXhBbrg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Raemil Corniel\\Documents\\QRAchallenge\\QRA\\QRA.Entities\\QRA.Entities.csproj",
+  "projectFilePath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Entities\\QRA.Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sCVkqVt1RwczF/IJwUA/yF86uMnEiBgK8nIT4rf3B1GJDEZZx+l7HcDtIgqWWiRUsgH/6NOKFgqrkCRkMPptNA==",
+  "dgSpecHash": "XK7raX6Fw3TS5n3sTEwX8yrTcsKbrh5ODHUP2CXew91i4wMOp3x6sfs43QwJHcH6YoAKPcqcyjYmFNp/3xTj+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Raemil Corniel\\Documents\\QRAchallenge\\QRA\\QRA.Persistence\\QRA.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Persistence\\QRA.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Raemil Corniel\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Raemil Corniel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
