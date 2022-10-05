@@ -22,14 +22,21 @@ token nvarchar(255)
 foreign key (idTenant) REFERENCES qra.tenants(idTenant)
 )
 
-create table qra.tenantsRole(
-idTenantRole bigint identity(1,1) primary key not null,
-idTenant bigint not null,
+create table qra.roles(
+idRole bigint identity(1,1) primary key not null,
 roleDescription nvarchar(100) not null,
-roleFather bigint not null,
-foreign key (idTenant) REFERENCES qra.tenants(idTenant)
+roleFather bigint not null
 )
 
+
+create  table qra.tenantsRole(
+idTenantRole bigint identity(1,1) primary key not null,
+idTenant bigint not null,
+idRole  bigint not null,
+foreign key (idTenant) REFERENCES qra.tenants(idTenant),
+foreign key (idRole) REFERENCES qra.roles(idRole)
+
+)
 create table qra.db (
 idDB bigint identity(1,1) primary key not null,
 dbSchema nvarchar(10) not null,
@@ -55,11 +62,11 @@ email varchar(50) not null,
 phone varchar(20) not null
 foreign key (idTenant) REFERENCES qra.tenants(idTenant),
 )
-
 create table qra.userRole (
 idUserRole bigint identity(1,1) primary key not null,
 idUser bigint not null,
-roleDescription nvarchar(100) not null,
-roleFather bigint not null,
-foreign key (idUser) REFERENCES qra.users(idUser)
+idRole bigint not null,
+foreign key (idUser) REFERENCES qra.users(idUser),
+foreign key (idRole) REFERENCES qra.roles(idRole)
+
 )
