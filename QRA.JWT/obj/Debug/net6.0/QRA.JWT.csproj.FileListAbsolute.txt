@@ -1,0 +1,17 @@
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\bin\Debug\net6.0\QRA.JWT.deps.json
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\bin\Debug\net6.0\QRA.JWT.dll
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\bin\Debug\net6.0\QRA.JWT.pdb
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\obj\Debug\net6.0\QRA.JWT.csproj.AssemblyReference.cache
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\obj\Debug\net6.0\QRA.JWT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\obj\Debug\net6.0\QRA.JWT.AssemblyInfoInputs.cache
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\obj\Debug\net6.0\QRA.JWT.AssemblyInfo.cs
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\obj\Debug\net6.0\QRA.JWT.csproj.CoreCompileInputs.cache
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\obj\Debug\net6.0\QRA.JWT.dll
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\obj\Debug\net6.0\refint\QRA.JWT.dll
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\obj\Debug\net6.0\QRA.JWT.pdb
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\obj\Debug\net6.0\ref\QRA.JWT.dll
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\bin\Debug\net6.0\QRA.Entities.dll
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\bin\Debug\net6.0\QRA.UseCases.dll
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\bin\Debug\net6.0\QRA.Entities.pdb
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\bin\Debug\net6.0\QRA.UseCases.pdb
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.JWT\obj\Debug\net6.0\QRA.JWT.csproj.CopyComplete
