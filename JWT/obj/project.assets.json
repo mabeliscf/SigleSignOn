@@ -2067,9 +2067,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\JWT\\JWT.csproj",
-      "projectName": "JWT",
-      "projectPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\JWT\\JWT.csproj",
+      "projectUniqueName": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\JWT\\QRA.JWT.csproj",
+      "projectName": "QRA.JWT",
+      "projectPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\JWT\\QRA.JWT.csproj",
       "packagesPath": "C:\\Users\\Raemil Corniel\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\JWT\\obj\\",
       "projectStyle": "PackageReference",

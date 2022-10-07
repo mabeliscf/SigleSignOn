@@ -1,7 +1,15 @@
 ﻿
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using QRA.Entities.contracts;
+using QRA.JWT.controllers;
+using QRA.JWT.interfaces;
 using QRA.Persistence;
+using QRA.Persistence.Services;
 using QRA.UseCases.Queries;
+using System.Text;
 
 namespace QRA.API
 {
@@ -21,82 +29,76 @@ namespace QRA.API
 
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddControllers(options => options.Filters.Add<ValidationResultAttribute>())
-            //    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<BillingFiltersValidator>());
-
-
+            //Database Configuration
             string QRAConnectionString = Configuration.GetConnectionString(name: "QRAChallenge");
             int timeout = Configuration.GetValue<int>("Timeout");
 
             services.AddDbContext<QRAchallengeContext>(options =>
                 options.UseSqlServer(QRAConnectionString, sql => sql.CommandTimeout(timeout)).UseLazyLoadingProxies());
 
-            //cors
+            //cors --url allows to access
             services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   builder =>
                                   {
                                       builder.AllowCredentials().WithOrigins("http://localhost:4200");
-                                     
 
                                       builder.AllowAnyHeader();
                                       builder.AllowAnyMethod();
-
                                   });
             });
 
-#if Develop
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Library.Api", Version = "v1" });
-            });
-#endif
+            //configure swagger documentation
+            services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApiInfo { Title = "SingleSignOn.API", Version = "v1" }));
 
-            // services.AddAutoMapper(typeof(BillingProfile).Assembly);
-
-            //services.ConfigDataBaseServices(Configuration);
-
-            //services.ConfigIoCServices(Configuration);
-
-            //services.ConfigIoCForFactories();
-
-            //services.ConfigIoCForCommands();
-
-            //services.ConfigIoCForQueries();
-
+            //allow DI
             services.AddControllers();
+            services.AddScoped<ITenantService, TenantService>();
+            services.AddScoped<IToken,Token>();
+
             //add queries 
             services.AddScoped<GetTenantQueries>();
 
+            //Jwt authentication
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options=>
+            {
+                options.RequireHttpsMetadata = false;
+                options.SaveToken = true;
+                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidAudience = Configuration["JWT:Audience"],
+                    ValidIssuer = Configuration["JWT:Issuer"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Key"]))
+                };
+            });
 
             services.AddHealthChecks();
-
             services.AddLogging();
             services.AddMvc();
         }
 
-        /// <summary>
-        /// Este método se llama el tiempo de ejecución. Utilice este método para configurar la tubería de solicitud HTTP.
-        /// </summary>
-        /// <param name="app">Define una clase que proporciona los mecanismos para configurar la tubería de solicitud de una aplicación.</param>
-        /// <param name="env">Proporciona información sobre el entorno de alojamiento web en la que se ejecuta una aplicación.</param>
+      
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
-                //app.UseSwagger();
+                app.UseSwagger();
 
-                //app.UseSwaggerUI(c =>
-                //{
-                //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Library.Api v1");
-                //    c.RoutePrefix = string.Empty;
-                //});
-            }else
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "SingleSignOn.Api v1");
+                    c.RoutePrefix = string.Empty;
+                });
+            }
+            else
             {
                 app.UseHsts();
             }
             app.UseAuthentication();
+
             app.UseCors(MyAllowSpecificOrigins);
 
             app.UseHttpsRedirection();

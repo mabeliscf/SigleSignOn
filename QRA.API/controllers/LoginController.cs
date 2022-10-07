@@ -14,6 +14,11 @@ namespace QRA.API.controllers
             _qr = qR;
         }
 
+        /// <summary>
+        /// test method
+        /// </summary>
+        /// <returns></returns>
+
        [HttpGet]
        public Tenant getData()
         {

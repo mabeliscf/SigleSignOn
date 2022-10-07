@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cXfn2FlsJo7B4YRWN8eToXv2LtPBDwwE/CVzXu+mmiAimuWGORe+JEldOLRTUsjVlAsopmkLG+QG40KFM/FQIA==",
+  "dgSpecHash": "E2nvowwXPCOzIm/Rjlo+viFVIobeTAMPPu/oH8dKE2ewoOxLN7Q+c2cWO+Y7w6NXzsbbvLqo5XXthFKKvzk3Og==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\JWT\\JWT.csproj",
+  "projectFilePath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\JWT\\QRA.JWT.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Raemil Corniel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Raemil Corniel\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.9\\microsoft.aspnetcore.authentication.jwtbearer.6.0.9.nupkg.sha512",
