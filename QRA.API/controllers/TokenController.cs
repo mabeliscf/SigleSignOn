@@ -23,10 +23,14 @@ namespace QRA.API.controllers
         [HttpPost]
         public ActionResult GetLogin(LoginDTO dto)
         {
-          
+            //delete 
+            dto.UserName = "rcorniel";
+            dto.Password = "123456";
+
 
 
             GlobalResponse response= itoken.validateUser(dto);
+
             if (response.responseNumber == 0)
             {
                 return BadRequest(response.response);
