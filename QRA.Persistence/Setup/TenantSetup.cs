@@ -36,7 +36,13 @@ namespace QRA.Persistence.Setup
                     .HasMaxLength(20)
                     .IsUnicode(false)
                     .HasColumnName("phone");
+
+                entity.Property(e => e.Username)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("username");
             });
+
 
         }
 

@@ -36,9 +36,7 @@ C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.Persistence\bin\Debug\net6.
 C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.Persistence\bin\Debug\net6.0\QRA.Persistence.dll
 C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.Persistence\bin\Debug\net6.0\QRA.Persistence.pdb
 C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.Persistence\bin\Debug\net6.0\QRA.Entities.dll
-C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.Persistence\bin\Debug\net6.0\QRA.UseCases.dll
 C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.Persistence\bin\Debug\net6.0\QRA.Entities.pdb
-C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.Persistence\bin\Debug\net6.0\QRA.UseCases.pdb
 C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.Persistence\obj\Debug\net6.0\QRA.Persistence.csproj.AssemblyReference.cache
 C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.Persistence\obj\Debug\net6.0\QRA.Persistence.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.Persistence\obj\Debug\net6.0\QRA.Persistence.AssemblyInfoInputs.cache

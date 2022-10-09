@@ -7,11 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mapper\" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\QRA.Entities\QRA.Entities.csproj" />
+    <ProjectReference Include="..\QRA.Persistence\QRA.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

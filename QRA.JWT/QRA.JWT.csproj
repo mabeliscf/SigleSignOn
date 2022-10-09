@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QRA.Entities\QRA.Entities.csproj" />
-    <ProjectReference Include="..\QRA.UseCases\QRA.UseCases.csproj" />
   </ItemGroup>
 
 </Project>

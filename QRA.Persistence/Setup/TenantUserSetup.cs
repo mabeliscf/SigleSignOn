@@ -39,11 +39,11 @@ namespace QRA.Persistence.Setup
                     .IsUnicode(false)
                     .HasColumnName("phone");
 
-                entity.HasOne(d => d.IdTenantNavigation)
-                    .WithMany(p => p.Users)
-                    .HasForeignKey(d => d.IdTenant)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__users__phone__35BCFE0A");
+                //entity.HasOne(d => d.IdTenantNavigation)
+                //    .WithMany(p => p.Users)
+                //    .HasForeignKey(d => d.IdTenant)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK__users__phone__35BCFE0A");
             });
 
 

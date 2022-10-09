@@ -28,11 +28,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Entities\\QRA.Entities.csproj": {
+                "projectPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Entities\\QRA.Entities.csproj"
+              },
               "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.JWT\\QRA.JWT.csproj": {
                 "projectPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.JWT\\QRA.JWT.csproj"
               },
               "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Persistence\\QRA.Persistence.csproj": {
                 "projectPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Persistence\\QRA.Persistence.csproj"
+              },
+              "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.UseCases\\QRA.UseCases.csproj": {
+                "projectPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.UseCases\\QRA.UseCases.csproj"
               }
             }
           }
@@ -47,6 +53,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.9, )"
@@ -180,9 +190,6 @@
             "projectReferences": {
               "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Entities\\QRA.Entities.csproj": {
                 "projectPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Entities\\QRA.Entities.csproj"
-              },
-              "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.UseCases\\QRA.UseCases.csproj": {
-                "projectPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.UseCases\\QRA.UseCases.csproj"
               }
             }
           }
@@ -251,9 +258,6 @@
             "projectReferences": {
               "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Entities\\QRA.Entities.csproj": {
                 "projectPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Entities\\QRA.Entities.csproj"
-              },
-              "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.UseCases\\QRA.UseCases.csproj": {
-                "projectPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.UseCases\\QRA.UseCases.csproj"
               }
             }
           }
@@ -332,6 +336,9 @@
             "projectReferences": {
               "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Entities\\QRA.Entities.csproj": {
                 "projectPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Entities\\QRA.Entities.csproj"
+              },
+              "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Persistence\\QRA.Persistence.csproj": {
+                "projectPath": "C:\\Users\\Raemil Corniel\\source\\repos\\SigleSignOn\\QRA.Persistence\\QRA.Persistence.csproj"
               }
             }
           }
@@ -345,6 +352,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

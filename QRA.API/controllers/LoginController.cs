@@ -1,11 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using QRA.Entities.Entities;
 using QRA.Persistence;
+using QRA.UseCases.DTOs;
 
 namespace QRA.API.controllers
 {
+    [Authorize]
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class LoginController : ControllerBase
     {
         public static  QRAchallengeContext _qr;
@@ -18,9 +21,9 @@ namespace QRA.API.controllers
         /// test method
         /// </summary>
         /// <returns></returns>
-
-       [HttpGet]
-       public Tenant getData()
+        [AllowAnonymous]
+        [HttpPost("dd")]
+       public Tenant getData([FromBody] LoginDTO logindto)
         {
             return _qr.Tenants.FirstOrDefault();
         }

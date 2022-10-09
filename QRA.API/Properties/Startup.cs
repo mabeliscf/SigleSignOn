@@ -3,11 +3,14 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using QRA.Entities.contracts;
-using QRA.JWT.controllers;
-using QRA.JWT.interfaces;
+using QRA.JWT.contracts;
+using QRA.JWT.jwt;
 using QRA.Persistence;
-using QRA.Persistence.Services;
+using QRA.UseCases.commands;
+using QRA.UseCases.Commands;
+using QRA.UseCases.contracts;
+using QRA.UseCases.Helpers;
+using QRA.UseCases.Mapper;
 using QRA.UseCases.Queries;
 using System.Text;
 
@@ -42,8 +45,8 @@ namespace QRA.API
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   builder =>
                                   {
-                                      builder.AllowCredentials().WithOrigins("http://localhost:4200");
-
+                                      //  builder.AllowCredentials().WithOrigins("http://localhost:4200");
+                                      builder.AllowAnyOrigin();
                                       builder.AllowAnyHeader();
                                       builder.AllowAnyMethod();
                                   });
@@ -52,10 +55,15 @@ namespace QRA.API
             //configure swagger documentation
             services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApiInfo { Title = "SingleSignOn.API", Version = "v1" }));
 
+           
+
             //allow DI
             services.AddControllers();
-            services.AddScoped<ITenantService, TenantService>();
+             services.AddScoped<ITenantService, TenantService>();
+            services.AddScoped<ITenantsLoginService, TenantsLoginService>();
             services.AddScoped<IToken,Token>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IModelValidation, UseCases.commands.ModelValidation>();
 
             //add queries 
             services.AddScoped<GetTenantQueries>();
@@ -74,6 +82,9 @@ namespace QRA.API
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Key"]))
                 };
             });
+
+            //add auto mapper
+            services.AddAutoMapper(typeof(RegisterProfile).Assembly);
 
             services.AddHealthChecks();
             services.AddLogging();

@@ -10,7 +10,6 @@
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "QRA.Entities": "1.0.0",
-          "QRA.UseCases": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "6.23.1"
         },
         "runtime": {
@@ -118,14 +117,6 @@
       "QRA.Entities/1.0.0": {
         "runtime": {
           "QRA.Entities.dll": {}
-        }
-      },
-      "QRA.UseCases/1.0.0": {
-        "dependencies": {
-          "QRA.Entities": "1.0.0"
-        },
-        "runtime": {
-          "QRA.UseCases.dll": {}
         }
       }
     }
@@ -242,11 +233,6 @@
       "hashPath": "system.text.json.4.7.2.nupkg.sha512"
     },
     "QRA.Entities/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "QRA.UseCases/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

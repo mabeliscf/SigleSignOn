@@ -13,12 +13,10 @@ namespace QRA.Persistence.Setup
 
         public static void ConfigureTenantsLogin(this ModelBuilder modelBuilder)
         {
-
-
             modelBuilder.Entity<TenantsLogin>(entity =>
             {
                 entity.HasKey(e => e.IdTenantLogin)
-                    .HasName("PK__tenantsL__80D605B2472D7D70");
+                    .HasName("PK__tenantsL__80D605B21C8A66BE");
 
                 entity.ToTable("tenantsLogin", "qra");
 
@@ -28,24 +26,11 @@ namespace QRA.Persistence.Setup
 
                 entity.Property(e => e.LoginType).HasColumnName("loginType");
 
-                entity.Property(e => e.PasswordEncrypted)
-                    .HasMaxLength(50)
-                    .HasColumnName("passwordEncrypted");
+                entity.Property(e => e.PasswordEncrypted).HasColumnName("passwordEncrypted");
 
-                entity.Property(e => e.Token)
-                    .HasMaxLength(255)
-                    .HasColumnName("token");
-
-                entity.Property(e => e.Username)
-                    .HasMaxLength(50)
-                    .HasColumnName("username");
-
-                entity.HasOne(d => d.IdTenantNavigation)
-                    .WithMany(p => p.TenantsLogins)
-                    .HasForeignKey(d => d.IdTenant)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__tenantsLo__token__2A4B4B5E");
+                entity.Property(e => e.PasswordSalt).HasColumnName("passwordSalt");
             });
+
         }
 
     }

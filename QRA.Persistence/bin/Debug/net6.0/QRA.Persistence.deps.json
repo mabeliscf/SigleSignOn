@@ -12,8 +12,7 @@
           "Microsoft.EntityFrameworkCore.Proxies": "6.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.9",
-          "QRA.Entities": "1.0.0",
-          "QRA.UseCases": "1.0.0"
+          "QRA.Entities": "1.0.0"
         },
         "runtime": {
           "QRA.Persistence.dll": {}
@@ -1260,14 +1259,6 @@
         "runtime": {
           "QRA.Entities.dll": {}
         }
-      },
-      "QRA.UseCases/1.0.0": {
-        "dependencies": {
-          "QRA.Entities": "1.0.0"
-        },
-        "runtime": {
-          "QRA.UseCases.dll": {}
-        }
       }
     }
   },
@@ -2139,11 +2130,6 @@
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },
     "QRA.Entities/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "QRA.UseCases/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
