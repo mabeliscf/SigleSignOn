@@ -68,6 +68,10 @@ namespace QRA.API
             //queries
             services.AddScoped<IGetRolesQuery, GetRolesQuery>();
             services.AddScoped<IGetDatabaseQuery, GetDatabaseQuery>();
+            services.AddScoped<IUserQuery,UserQuery>();
+            services.AddScoped<IGetTenantQuery, GetTenantQuery>();
+            services.AddScoped<IGetTenantLoginQuery, GetTenantLoginQuery>();
+
 
 
 

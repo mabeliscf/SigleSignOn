@@ -9,7 +9,6 @@ namespace QRA.Entities.Entities
         public long IdTenant { get; set; }
         public long IdDb { get; set; }
 
-        public virtual Db IdDbNavigation { get; set; } = null!;
-        public virtual Tenant IdTenantNavigation { get; set; } = null!;
+     
     }
 }
