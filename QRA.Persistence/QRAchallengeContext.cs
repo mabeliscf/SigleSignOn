@@ -53,9 +53,11 @@ namespace QRA.Persistence
             modelBuilder.ConfigureDbAccess();
             modelBuilder.ConfigureTenantsLogin();
             modelBuilder.ConfigureTenantsRole();
+          
+            modelBuilder.ConfigureRole();
+            //TODO: Remove user. it will no longer be used
             modelBuilder.ConfigureUser();
             modelBuilder.ConfigureUserRole();
-            modelBuilder.ConfigureRole();
 
 
             OnModelCreatingPartial(modelBuilder);

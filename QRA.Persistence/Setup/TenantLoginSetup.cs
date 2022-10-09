@@ -29,6 +29,11 @@ namespace QRA.Persistence.Setup
                 entity.Property(e => e.PasswordEncrypted).HasColumnName("passwordEncrypted");
 
                 entity.Property(e => e.PasswordSalt).HasColumnName("passwordSalt");
+
+                entity.Property(e => e.Administrator).HasColumnName("administrator");
+                entity.Property(e => e.TenantFather).HasColumnName("tenantFather");
+
+
             });
 
         }

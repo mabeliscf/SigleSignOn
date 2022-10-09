@@ -10,5 +10,7 @@ namespace QRA.Entities.Entities
         public byte[] PasswordEncrypted { get; set; } = null!;
         public byte[] PasswordSalt { get; set; } = null!;
         public int LoginType { get; set; }
+        public bool Administrator { get; set; } = false!;
+        public long? TenantFather { get; set; } 
     }
 }

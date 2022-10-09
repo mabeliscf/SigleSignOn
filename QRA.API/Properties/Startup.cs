@@ -61,12 +61,21 @@ namespace QRA.API
             services.AddControllers();
              services.AddScoped<ITenantService, TenantService>();
             services.AddScoped<ITenantsLoginService, TenantsLoginService>();
-            services.AddScoped<IToken,Token>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IRolesService, RolesService>();
+            services.AddScoped<IDatabaseService, DatabaseService>();
+
+            //queries
+            services.AddScoped<IGetRolesQuery, GetRolesQuery>();
+            services.AddScoped<IGetDatabaseQuery, GetDatabaseQuery>();
+
+
+
+            services.AddScoped<IToken,Token>();
             services.AddScoped<IModelValidation, UseCases.commands.ModelValidation>();
 
             //add queries 
-            services.AddScoped<GetTenantQueries>();
+            services.AddScoped<GetTenantQuery>();
 
             //Jwt authentication
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options=>
@@ -75,7 +84,7 @@ namespace QRA.API
                 options.SaveToken = true;
                 options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
                 {
-                    ValidateIssuer = true,
+                    ValidateIssuer = false,
                     ValidateAudience = true,
                     ValidAudience = Configuration["JWT:Audience"],
                     ValidIssuer = Configuration["JWT:Issuer"],

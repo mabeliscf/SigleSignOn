@@ -22,11 +22,11 @@ namespace QRA.Persistence.Setup
 
                 entity.Property(e => e.IdTenant).HasColumnName("idTenant");
 
-                entity.HasOne(d => d.IdDbNavigation)
-                    .WithMany(p => p.DbAccesses)
-                    .HasForeignKey(d => d.IdDb)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__dbAccess__idDB__32E0915F");
+                //entity.HasOne(d => d.IdDbNavigation)
+                //    .WithMany(p => p.DbAccesses)
+                //    .HasForeignKey(d => d.IdDb)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK__dbAccess__idDB__32E0915F");
 
                 //entity.HasOne(d => d.IdTenantNavigation)
                 //    .WithMany(p => p.DbAccesses)
