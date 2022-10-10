@@ -13,6 +13,10 @@ using QRA.UseCases.Helpers;
 using QRA.UseCases.Mapper;
 using QRA.UseCases.Queries;
 using System.Text;
+using Okta.AspNetCore;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using System.Net;
 
 namespace QRA.API
 {
@@ -28,7 +32,7 @@ namespace QRA.API
         }
         public IConfiguration Configuration { get; }
 
-      
+
 
         public void ConfigureServices(IServiceCollection services)
         {
@@ -45,7 +49,6 @@ namespace QRA.API
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   builder =>
                                   {
-                                      //  builder.AllowCredentials().WithOrigins("http://localhost:4200");
                                       builder.AllowAnyOrigin();
                                       builder.AllowAnyHeader();
                                       builder.AllowAnyMethod();
@@ -55,11 +58,11 @@ namespace QRA.API
             //configure swagger documentation
             services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApiInfo { Title = "SingleSignOn.API", Version = "v1" }));
 
-           
+
 
             //allow DI
             services.AddControllers();
-             services.AddScoped<ITenantService, TenantService>();
+            services.AddScoped<ITenantService, TenantService>();
             services.AddScoped<ITenantsLoginService, TenantsLoginService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IRolesService, RolesService>();
@@ -68,21 +71,27 @@ namespace QRA.API
             //queries
             services.AddScoped<IGetRolesQuery, GetRolesQuery>();
             services.AddScoped<IGetDatabaseQuery, GetDatabaseQuery>();
-            services.AddScoped<IUserQuery,UserQuery>();
+            services.AddScoped<IUserQuery, UserQuery>();
             services.AddScoped<IGetTenantQuery, GetTenantQuery>();
             services.AddScoped<IGetTenantLoginQuery, GetTenantLoginQuery>();
 
 
 
 
-            services.AddScoped<IToken,Token>();
+            services.AddScoped<IToken, Token>();
             services.AddScoped<IModelValidation, UseCases.commands.ModelValidation>();
 
             //add queries 
             services.AddScoped<GetTenantQuery>();
 
-            //Jwt authentication
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options=>
+            //Jwt & okta auth authentication
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = OktaDefaults.ApiAuthenticationScheme;
+                options.DefaultChallengeScheme = OktaDefaults.ApiAuthenticationScheme;
+                options.DefaultSignInScheme = OktaDefaults.ApiAuthenticationScheme;
+            })
+            .AddJwtBearer( options =>
             {
                 options.RequireHttpsMetadata = false;
                 options.SaveToken = true;
@@ -94,14 +103,46 @@ namespace QRA.API
                     ValidIssuer = Configuration["JWT:Issuer"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Key"]))
                 };
-            });
+            })
+            .AddOktaWebApi("okta", new OktaWebApiOptions()
+            {
+                OktaDomain = Configuration["Okta:OktaDomain"],
+                AuthorizationServerId = Configuration["Okta:AuthorizationServerId"],
+                Audience = Configuration["Okta:Audience"]
+            }); ;
 
+            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //    .AddJwtBearer(options =>
+            //    {
+            //        options.Authority = "https://{yourOktaDomain}/oauth2/default";
+            //        options.Audience = Configuration["Okta:Audience"];
+            //    });
+
+
+
+
+            services.AddAuthorization(options =>
+            {
+                var defaultAuthorizationPolicyBuilder = new AuthorizationPolicyBuilder(
+                    JwtBearerDefaults.AuthenticationScheme,
+                    "okta");
+                defaultAuthorizationPolicyBuilder =
+                    defaultAuthorizationPolicyBuilder.RequireAuthenticatedUser();
+                options.DefaultPolicy = defaultAuthorizationPolicyBuilder.Build();
+            });
             //add auto mapper
             services.AddAutoMapper(typeof(RegisterProfile).Assembly);
 
             services.AddHealthChecks();
             services.AddLogging();
-            services.AddMvc();
+            services.AddMvc(o =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                  .RequireAuthenticatedUser()
+                  .Build();
+                o.Filters.Add(new AuthorizeFilter(policy));
+            });
+
         }
 
       

@@ -198,3 +198,7 @@ C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.API\obj\Debug\net6.0\refint
 C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.API\obj\Debug\net6.0\QRA.API.pdb
 C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.API\obj\Debug\net6.0\QRA.API.genruntimeconfig.cache
 C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.API\obj\Debug\net6.0\ref\QRA.API.dll
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.API\bin\Debug\net6.0\Okta.AspNet.Abstractions.dll
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.API\bin\Debug\net6.0\Okta.AspNetCore.dll
