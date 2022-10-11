@@ -20,15 +20,17 @@ namespace QRA.API.controllers
         public readonly IModelValidation imodelValidation;
         public readonly IMapper imapper;
         public readonly IUserQuery iuserQuery;
+        public readonly IGetTenantQuery itenantQuery;
 
-       
-        public UserController(IToken token, IUserService user, IModelValidation model, IMapper mapper, IUserQuery userQuery)
+
+        public UserController(IToken token, IUserService user, IModelValidation model, IMapper mapper, IUserQuery userQuery, IGetTenantQuery tenantQuery)
         {
             itoken = token;
             iuser = user;
             imodelValidation = model;
             imapper = mapper;
             iuserQuery = userQuery;
+            itenantQuery= tenantQuery;
         }
         /// <summary>
         /// given a user and password validate user login
@@ -51,6 +53,27 @@ namespace QRA.API.controllers
 
             if (response.responseNumber == 0) return BadRequest(response.response);    
            
+            //map return 
+            UserLogged userLogged = imapper.Map<UserLogged>(user);
+            userLogged.Token = response.response;
+
+            return Ok(userLogged);
+        }
+
+        [HttpGet("validateUser")]
+        public IActionResult validUser(long id)
+        {
+            //check if is a valid user 
+            Tenant user = itenantQuery.GetTenantbyId(id);
+
+            //if user is valid generate token 
+            if (user == null) return BadRequest("Username or password incorrect!");
+
+            //generate token
+            GlobalResponse response = itoken.validateUser(user);
+
+            if (response.responseNumber == 0) return BadRequest(response.response);
+
             //map return 
             UserLogged userLogged = imapper.Map<UserLogged>(user);
             userLogged.Token = response.response;
