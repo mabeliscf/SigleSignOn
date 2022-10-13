@@ -43,5 +43,10 @@ namespace QRA.UseCases.Queries
         {
             return (long)_context.TenantsLogins.Where(a => a.IdTenant == id).Select(a => a.TenantFather).FirstOrDefault();
         }
+
+        public bool adminExist()
+        {
+            return _context.TenantsLogins.Where(a => a.Administrator==true ).Count() ==0 ? false : true;
+        }
     }
 }

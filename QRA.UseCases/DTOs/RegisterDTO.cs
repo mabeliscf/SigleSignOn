@@ -13,7 +13,9 @@ namespace QRA.UseCases.DTOs
         public string Username { get; set; } = null!;
 
         [Required]
-        public string Fullname { get; set; } = null!;
+        public string FirstName { get; set; } = null!;
+        [Required]
+        public string Lastname { get; set; } = null!;
 
         [Required]
         public string Phone { get; set; } = null!;
@@ -32,7 +34,6 @@ namespace QRA.UseCases.DTOs
         public bool IsTenant { get; set; }
 
         public bool IsUser { get; set; }
-
 
 
 

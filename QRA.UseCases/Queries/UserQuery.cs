@@ -45,6 +45,16 @@ namespace QRA.UseCases.Queries
             return admin;
         }
         /// <summary>
+        /// Get all admins
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool GetAllAdmins()
+        {
+         
+            return itenantlogin.adminExist();
+        }
+        /// <summary>
         /// given a admin id, returns all tenants with roles, db access, and users under each tenant
         /// </summary>
         /// <param name="id"></param>

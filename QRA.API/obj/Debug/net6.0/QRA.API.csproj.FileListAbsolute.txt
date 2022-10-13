@@ -202,3 +202,5 @@ C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.API\bin\Debug\net6.0\Micros
 C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.API\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.API\bin\Debug\net6.0\Okta.AspNet.Abstractions.dll
 C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.API\bin\Debug\net6.0\Okta.AspNetCore.dll
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.API\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\Raemil Corniel\source\repos\SigleSignOn\QRA.API\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

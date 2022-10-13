@@ -2,6 +2,7 @@
 using AutoMapper;
 using QRA.Entities.Entities;
 using QRA.Entities.Models;
+using QRA.Entities.oktaModels;
 using QRA.Persistence;
 using QRA.UseCases.contracts;
 using QRA.UseCases.DTOs;
@@ -71,6 +72,12 @@ namespace QRA.UseCases.commands
         /// <returns></returns>
         public Tenant CreateAdmin(RegisterDTO registerDTO)
         {
+            // Create user in okta
+            OktaUser registerOktaUser = imapper.Map<OktaUser>(registerDTO);
+
+           
+
+
             //create user in tenants 
             Tenant register = imapper.Map<Tenant>(registerDTO);
             register.IdTenant= tenantService.create(register);

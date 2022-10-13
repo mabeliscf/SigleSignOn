@@ -15,5 +15,6 @@ namespace QRA.UseCases.contracts
         TenantInfo GetTenatInfobyId(long id);
         UserInfo GetUserInfoByID(long idUser);
         List<UserInfo> GetUsersbyTenantID(long id);
+        bool GetAllAdmins();
     }
 }

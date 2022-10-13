@@ -12,5 +12,6 @@ namespace QRA.UseCases.contracts
         GlobalResponse CreateUser(RegisterUserDTO registerUser);
 
         bool isNewUser(string mail);
+
     }
 }

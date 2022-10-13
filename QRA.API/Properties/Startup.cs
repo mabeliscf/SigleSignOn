@@ -74,7 +74,7 @@ namespace QRA.API
             services.AddScoped<IUserQuery, UserQuery>();
             services.AddScoped<IGetTenantQuery, GetTenantQuery>();
             services.AddScoped<IGetTenantLoginQuery, GetTenantLoginQuery>();
-
+            services.AddScoped<IOktaService, OktaService>();
 
 
 
@@ -83,6 +83,14 @@ namespace QRA.API
 
             //add queries 
             services.AddScoped<GetTenantQuery>();
+
+            //http
+      
+            services.AddHttpClient<IOktaService, OktaService>("okta",
+               httpClient =>
+               {
+                   httpClient.BaseAddress = new Uri(Configuration["BaseUrls:okta"]);
+               });
 
             //Jwt & okta auth authentication
             services.AddAuthentication(options =>
@@ -110,15 +118,6 @@ namespace QRA.API
                 AuthorizationServerId = Configuration["Okta:AuthorizationServerId"],
                 Audience = Configuration["Okta:Audience"]
             }); ;
-
-            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            //    .AddJwtBearer(options =>
-            //    {
-            //        options.Authority = "https://{yourOktaDomain}/oauth2/default";
-            //        options.Audience = Configuration["Okta:Audience"];
-            //    });
-
-
 
 
             services.AddAuthorization(options =>

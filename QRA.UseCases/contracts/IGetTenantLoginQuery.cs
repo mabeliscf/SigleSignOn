@@ -10,5 +10,6 @@ namespace QRA.UseCases.contracts
     {
         long getTenantFather(long id);
         bool isAdmin(long id);
+        bool adminExist();
     }
 }

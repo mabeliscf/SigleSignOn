@@ -23,6 +23,7 @@ namespace QRA.UseCases.Queries
         {
             return _context.Tenants.Where(a => a.IdTenant == id).FirstOrDefault();
         }
+       
 
         /// <summary>
         /// return all tenants, no user or admin

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using QRA.Entities.Entities;
 using QRA.Entities.Models;
 using QRA.JWT.contracts;
+using QRA.UseCases.Commands;
 using QRA.UseCases.contracts;
 using QRA.UseCases.DTOs;
 using QRA.UseCases.Helpers;
@@ -21,9 +22,10 @@ namespace QRA.API.controllers
         public readonly IMapper imapper;
         public readonly IUserQuery iuserQuery;
         public readonly IGetTenantQuery itenantQuery;
+        public readonly IOktaService ioktaService;
 
 
-        public UserController(IToken token, IUserService user, IModelValidation model, IMapper mapper, IUserQuery userQuery, IGetTenantQuery tenantQuery)
+        public UserController(IOktaService oktaService, IToken token, IUserService user, IModelValidation model, IMapper mapper, IUserQuery userQuery, IGetTenantQuery tenantQuery)
         {
             itoken = token;
             iuser = user;
@@ -31,6 +33,7 @@ namespace QRA.API.controllers
             imapper = mapper;
             iuserQuery = userQuery;
             itenantQuery= tenantQuery;
+            ioktaService = oktaService;
         }
         /// <summary>
         /// given a user and password validate user login
@@ -46,7 +49,7 @@ namespace QRA.API.controllers
             Tenant user = iuser.Authenticate(model.UserName, model.Password);
 
             //if user is valid generate token 
-            if (user == null) return BadRequest("Username or password incorrect!");
+            if (user == null) return BadRequest ("Username or password incorrect!");
            
             //generate token
             GlobalResponse response = itoken.validateUser(user);
@@ -90,14 +93,13 @@ namespace QRA.API.controllers
         [HttpPost("register")]
         public IActionResult Register([FromBody] RegisterDTO model)
         {
-            if (!imodelValidation.isFieldsValid(model))
-                return BadRequest("Please fill form correctly!");
-
+            //if (!imodelValidation.isFieldsValid(model))
+            //    return BadRequest("Please fill form correctly!");
+            var result = ioktaService.CreateUser(model);
             if (!iuser.isNewUser(model.Email))
                 return BadRequest("This user exist, please log in!");
 
             Tenant user = iuser.CreateAdmin(model);
-
             return Ok(user);
 
         }
@@ -110,6 +112,7 @@ namespace QRA.API.controllers
         [HttpPost("CreateUsers")]
         public IActionResult RegisterUsers([FromBody] RegisterUserDTO model)
         {
+          
             if (!imodelValidation.isFieldsValid(model))
                 return BadRequest("Please fill form correctly!");
 
@@ -165,6 +168,26 @@ namespace QRA.API.controllers
             return Ok(result);
 
         }
+        [AllowAnonymous]
+        [HttpGet("isAdminCreated")]
+        public bool GetAllAdmins()
+        {
+            return iuserQuery.GetAllAdmins();
 
+        }
+        //TODO: update user method
+        [HttpPost]
+        public bool updateUser()
+        {
+            return false;
+        }
+
+        [AllowAnonymous]
+        [HttpGet("gettoken")]
+        public OktaToken getToken()
+        {
+            return ioktaService.getToken();
+
+        }
     }
 }
