@@ -15,11 +15,11 @@ namespace QRA.Entities.oktaModels
     }
      public class Profile
     {
-        public string FirstName  { get; set; } = null!;
-        public string LastName  { get; set; } = null!;
-        public string Email { get; set; } = null!;
-        public string Login { get; set; } = null!;
-        public string MobilePhone { get; set; } = null!;
+        public string firstName { get; set; } = null!;
+        public string lastName { get; set; } = null!;
+        public string email { get; set; } = null!;
+        public string login { get; set; } = null!;
+        public string mobilePhone { get; set; } = null!;
     }
 
 

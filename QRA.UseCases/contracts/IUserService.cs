@@ -7,7 +7,7 @@ namespace QRA.UseCases.contracts
     public interface IUserService
     {
         Tenant Authenticate(string  username, string password);
-        Tenant CreateAdmin(RegisterDTO registerDTO);
+        GlobalResponse CreateAdmin(RegisterDTO registerDTO);
 
         GlobalResponse CreateUser(RegisterUserDTO registerUser);
 

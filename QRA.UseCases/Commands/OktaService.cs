@@ -4,14 +4,8 @@ using Newtonsoft.Json;
 using QRA.Entities.Models;
 using QRA.Entities.oktaModels;
 using QRA.UseCases.contracts;
-using QRA.UseCases.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
 using System.Text;
-using System.Threading.Tasks;
-using static QRA.UseCases.Commands.OktaService;
+
 
 namespace QRA.UseCases.Commands
 {
@@ -19,10 +13,8 @@ namespace QRA.UseCases.Commands
     {
         public IConfiguration iconfiguration;
         static HttpClient client = new HttpClient();
-        public readonly IMapper imapper;
-        public OktaService(HttpClient client, IConfiguration configuration, IMapper mapper) : base(client) {
+        public OktaService(HttpClient client, IConfiguration configuration) : base(client) {
             iconfiguration = configuration;
-            imapper = mapper;
         }
         
         public OktaToken getToken()
@@ -52,15 +44,9 @@ namespace QRA.UseCases.Commands
             return result;
         }
 
-        public object CreateUser(RegisterDTO body ) //(OktaUser body)
+        public string CreateUser(OktaUser body ) 
         {
-            // Create user in okta
-            OktaUser registerOktaUser = imapper.Map<OktaUser>(body);
-
-
-            var path = "/oauth2/default/v1/users?activate=true";
-
-            var token = getToken().Access_token;
+            var path = "/api/v1/users?activate=true";
 
             var headers = new Dictionary<string, string>
             {
@@ -69,16 +55,72 @@ namespace QRA.UseCases.Commands
                 { "Authorization", "SSWS " + iconfiguration["Okta:api_key"]  }
             };
             //OktaUserResponse
-            var result = Post<object>(path, body, headers).Result;
+            var result = Post<dynamic>(path, body, headers).Result;
 
-            return result;
+            return result.status ;
         }
-        public bool CreateUser()
+        public string CreateUserGroup(OktaUser body)
         {
-            return true;
+            var path = "/api/v1/users?activate=true";
+
+            var headers = new Dictionary<string, string>
+            {
+                { "Connection", "keep-alive" },
+                { "Accept", "application/json" },
+                { "Authorization", "SSWS " + iconfiguration["Okta:api_key"]  }
+            };
+            //OktaUserResponse
+            var result = Post<dynamic>(path, body, headers).Result;
+
+            return result.status;
         }
 
+        public string CreateGroups(oktaGroup body)
+        {
+            var path = "/api/v1/groups";
 
+            var headers = new Dictionary<string, string>
+            {
+                { "Connection", "keep-alive" },
+                { "Accept", "application/json" },
+                { "Authorization", "SSWS " + iconfiguration["Okta:api_key"]  }
+            };
+            //OktaUserResponse
+            var result = Post<dynamic>(path, body, headers).Result;
+
+            return result.status;
+        }
+
+        public string AddUsertoGroup(long groupID , long userid)
+        {
+            var path = "/api/v1/groups/"+groupID+"/users/"+userid;
+
+            var headers = new Dictionary<string, string>
+            {
+                { "Connection", "keep-alive" },
+                { "Accept", "application/json" },
+                { "Authorization", "SSWS " + iconfiguration["Okta:api_key"]  }
+            };
+            
+            var result = Put<dynamic>(path, null, headers).Result;
+
+            return result.status;
+        }
+        public string DeleteUsertoGroup(long groupID, long userid)
+        {
+            var path = "/api/v1/groups/" + groupID + "/users/" + userid;
+
+            var headers = new Dictionary<string, string>
+            {
+                { "Connection", "keep-alive" },
+                { "Accept", "application/json" },
+                { "Authorization", "SSWS " + iconfiguration["Okta:api_key"]  }
+            };
+           
+            var result = Delete<dynamic>(path, headers).Result;
+
+            return result.status;
+        }
 
     }
 

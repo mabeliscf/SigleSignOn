@@ -7,6 +7,7 @@ using QRA.Persistence;
 using QRA.UseCases.contracts;
 using QRA.UseCases.DTOs;
 using System.Text;
+using Profile = QRA.Entities.oktaModels.Profile;
 
 namespace QRA.UseCases.commands
 {
@@ -16,14 +17,16 @@ namespace QRA.UseCases.commands
         private readonly IMapper imapper;
         private readonly ITenantsLoginService tenantsLoginService;
         private readonly ITenantService tenantService;
+        private readonly IOktaService iokta;
 
 
-        public UserService(QRAchallengeContext qR, IMapper mapper, ITenantsLoginService tenantsLogin, ITenantService tenant)
+        public UserService(IOktaService okta,QRAchallengeContext qR, IMapper mapper, ITenantsLoginService tenantsLogin, ITenantService tenant)
         {
             _context = qR;
             imapper = mapper;
             tenantsLoginService = tenantsLogin;
             tenantService = tenant;
+            iokta = okta;
         }
 
         /// <summary>
@@ -70,30 +73,36 @@ namespace QRA.UseCases.commands
         /// </summary>
         /// <param name="registerDTO"></param>
         /// <returns></returns>
-        public Tenant CreateAdmin(RegisterDTO registerDTO)
+        public GlobalResponse CreateAdmin(RegisterDTO registerDTO)
         {
-            // Create user in okta
-            OktaUser registerOktaUser = imapper.Map<OktaUser>(registerDTO);
+            GlobalResponse global = new GlobalResponse();
+            try
+            {
+                //map model to okta model
+                OktaUser registerOktaUser = imapper.Map<OktaUser>(registerDTO);
+                registerOktaUser.profile = new Profile();
+                registerOktaUser.profile = imapper.Map<Profile>(registerDTO);
+                Credentials credentials = new Credentials();
+                credentials.password = new Password();
+                credentials.password = imapper.Map<Password>(registerDTO);
+                registerOktaUser.credentials = credentials;
+                // Create user in okta
+                string status = iokta.CreateUser(body: registerOktaUser);
 
-           
+                //create user in tenants 
+                Tenant register = CreateBasicUser(registerDTO);
 
 
-            //create user in tenants 
-            Tenant register = imapper.Map<Tenant>(registerDTO);
-            register.IdTenant= tenantService.create(register);
+                global.response = status;
+                global.responseNumber = 1;
+            }
+            catch (Exception e)
+            {
 
-            //create tenantslogin 
-            TenantsLogin registerlogin = imapper.Map<TenantsLogin>(registerDTO);
-            //create password 
-            byte[] hash, salt;
-            CreateHashPassword( registerDTO.Password,  out hash, out salt);
-            registerlogin.IdTenant = register.IdTenant;
-            registerlogin.PasswordEncrypted = hash;
-            registerlogin.PasswordSalt = salt;
-            //create tennats login
-            register.IdTenant = tenantsLoginService.create(registerlogin);
+                throw new Exception(e.Message);
+            }
 
-            return register;
+            return global;
         }
 
         /// <summary>
@@ -104,22 +113,23 @@ namespace QRA.UseCases.commands
         public GlobalResponse CreateUser(RegisterUserDTO registerUser)
         {
             GlobalResponse response = new GlobalResponse();
-
+            
             try
             {
-                //create user 
-                Tenant register = imapper.Map<Tenant>(registerUser);
-                register.IdTenant = tenantService.create(register);
+                //map model to okta model
+                OktaUserGroup registerOktaUser = imapper.Map<OktaUserGroup>(registerUser);
+                registerOktaUser.profile = new Profile();
+                registerOktaUser.profile = imapper.Map<Profile>(registerUser);
+                Credentials credentials = new Credentials();
+                credentials.password = new Password();
+                credentials.password = imapper.Map<Password>(registerUser);
+                registerOktaUser.credentials = credentials;
+                // Create user under a gruop (tenant space )
+                string status = iokta.CreateUserGroup(body: registerOktaUser);
 
-                //create access 
-                TenantsLogin access = imapper.Map<TenantsLogin>(registerUser);
-                //create password 
-                byte[] hash, salt;
-                CreateHashPassword(registerUser.Password, out hash, out salt);
-                access.IdTenant = register.IdTenant;
-                access.PasswordEncrypted = hash;
-                access.PasswordSalt = salt;
-                register.IdTenant = tenantsLoginService.create(access);
+                //create user 
+                Tenant register = CreateBasicUser(registerUser);
+
 
                 //create roles
                 registerUser.Roles.ForEach(role => { tenantService.createTenantRole(register.IdTenant, role.IdRole); });
@@ -144,7 +154,86 @@ namespace QRA.UseCases.commands
             response.response ="Creado Correctamente!";
             return response;
         }
+        /// <summary>
+        /// create user and tenant space Group
+        /// </summary>
+        /// <param name="registerUser"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
+        public GlobalResponse CreateTenantGroup(RegisterUserDTO registerUser)
+        {
+            GlobalResponse response = new GlobalResponse();
 
+            try
+            {
+                //map model to okta model
+                OktaUser registerOktaUser = imapper.Map<OktaUser>(registerUser);
+                registerOktaUser.profile = new Profile();
+                registerOktaUser.profile = imapper.Map<Profile>(registerUser);
+                Credentials credentials = new Credentials();
+                credentials.password = new Password();
+                credentials.password = imapper.Map<Password>(registerUser);
+                registerOktaUser.credentials = credentials;
+                // Create user under a gruop (tenant space )
+                string status = iokta.CreateUser(body: registerOktaUser);
+
+                oktaGroup oktaGroup = imapper.Map<oktaGroup>(registerUser);
+                string tenant_space_ID  = iokta.CreateGroups(body: oktaGroup);
+
+                //TODO:add db space id 
+                //create user 
+                 Tenant register= CreateBasicUser(registerUser);
+                //create roles
+                registerUser.Roles.ForEach(role => { tenantService.createTenantRole(register.IdTenant, role.IdRole); });
+
+                if (!registerUser.IsUser)
+                {
+                    //create db
+                    registerUser.Databases.ForEach(role => { tenantService.createTenantDBAccess(register.IdTenant, role.IdDb); });
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                response.responseNumber = 0;
+                response.response = e.Message;
+
+                throw new Exception(e.Message);
+            }
+
+            response.responseNumber = 1;
+            response.response = "Creado Correctamente!";
+            return response;
+        }
+
+
+        private  Tenant CreateBasicUser( RegisterDTO registerUser)
+        {
+            Tenant register = imapper.Map<Tenant>(registerUser);
+
+            try
+            {  //create user 
+                register.IdTenant = tenantService.create(register);
+
+                //create access 
+                TenantsLogin access = imapper.Map<TenantsLogin>(registerUser);
+                //create password 
+                byte[] hash, salt;
+                CreateHashPassword(registerUser.Password, out hash, out salt);
+                access.IdTenant = register.IdTenant;
+                access.PasswordEncrypted = hash;
+                access.PasswordSalt = salt;
+                register.IdTenant = tenantsLoginService.create(access);
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
+            return register;
+        }
 
         /// <summary>
         /// validate if user input password is the same as the one storage

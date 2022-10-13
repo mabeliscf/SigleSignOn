@@ -31,24 +31,46 @@ namespace QRA.UseCases.Mapper
                .ForMember(model => model.Administrator, action => action.MapFrom(c => c.IsAdmin))
                .ForMember(model => model.TenantFather, action => action.MapFrom(c => c.IdTenantFather));
 
+            CreateMap<RegisterUserDTO, OktaUserGroup>()
+             .ForMember(model => model.groupIds, action => action.MapFrom(c => c.Group));
+
+
+            CreateMap<RegisterUserDTO, Entities.oktaModels.Profile>()
+             .ForMember(model => model.firstName, action => action.MapFrom(c => c.FirstName))
+             .ForMember(model => model.lastName, action => action.MapFrom(c => c.Lastname))
+             .ForMember(model => model.email, action => action.MapFrom(c => c.Email))
+             .ForMember(model => model.login, action => action.MapFrom(c => c.Username))
+             .ForMember(model => model.mobilePhone, action => action.MapFrom(c => c.Phone));
+
+            CreateMap<RegisterUserDTO, Credentials>();
+
+            CreateMap<RegisterUserDTO, Password>()
+           .ForMember(model => model.value, action => action.MapFrom(c => c.Password));
+
+
 
             CreateMap<RegisterDTO, OktaUser>();
-             //.ForMember(model => model.profile.FirstName, action => action.MapFrom(c => c.FirstName))
-             //.ForMember(model => model.profile.LastName, action => action.MapFrom(c => c.Lastname))
-             //.ForMember(model => model.profile.Email, action => action.MapFrom(c => c.Email))
-             //.ForMember(model => model.profile.Login, action => action.MapFrom(c => c.Username))
-             //.ForMember(model => model.profile.MobilePhone, action => action.MapFrom(c => c.Phone))
-             //.ForMember(model => model.credentials.password.value, action => action.MapFrom(c => c.Password));
-
+          
             CreateMap<RegisterDTO, Entities.oktaModels.Profile>()
-             .ForMember(model => model.FirstName, action => action.MapFrom(c => c.FirstName))
-             .ForMember(model => model.LastName, action => action.MapFrom(c => c.Lastname))
-             .ForMember(model => model.Email, action => action.MapFrom(c => c.Email))
-             .ForMember(model => model.Login, action => action.MapFrom(c => c.Username))
-             .ForMember(model => model.MobilePhone, action => action.MapFrom(c => c.Phone));
+             .ForMember(model => model.firstName, action => action.MapFrom(c => c.FirstName))
+             .ForMember(model => model.lastName, action => action.MapFrom(c => c.Lastname))
+             .ForMember(model => model.email, action => action.MapFrom(c => c.Email))
+             .ForMember(model => model.login, action => action.MapFrom(c => c.Username))
+             .ForMember(model => model.mobilePhone, action => action.MapFrom(c => c.Phone));
+
             CreateMap<RegisterDTO, Credentials>();
+
             CreateMap<RegisterDTO, Password>()
            .ForMember(model => model.value, action => action.MapFrom(c => c.Password));
+
+
+
+            CreateMap<RegisterUserDTO, oktaGroup>();
+
+            CreateMap<RegisterUserDTO, ProfileGroup>()
+             .ForMember(model => model.name, action => action.MapFrom(c => c.Group))
+             .ForMember(model => model.description, action => action.MapFrom(c => c.Group));
+            
 
         }
 

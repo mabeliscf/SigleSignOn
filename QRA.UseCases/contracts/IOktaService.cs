@@ -1,17 +1,15 @@
 ﻿using QRA.Entities.Models;
 using QRA.Entities.oktaModels;
-using QRA.UseCases.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QRA.UseCases.contracts
 {
     public interface IOktaService
     {
-        object CreateUser(RegisterDTO body);
+        string AddUsertoGroup(long groupID, long userid);
+        string CreateGroups(oktaGroup body);
+        string CreateUser(OktaUser body);
+        string CreateUserGroup(OktaUser body);
+        string DeleteUsertoGroup(long groupID, long userid);
         OktaToken getToken();
     }
 }
