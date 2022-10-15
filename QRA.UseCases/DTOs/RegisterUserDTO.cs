@@ -18,7 +18,7 @@ namespace QRA.UseCases.DTOs
         //if user
         public long IdTenantFather { get; set; }
 
-        public string Group { get; set; }
+       
 
 
     }

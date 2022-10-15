@@ -38,7 +38,8 @@ namespace QRA.UseCases.Queries
          /// <returns></returns>
         public AdminInfo GetAdminbyId(long id)
         {
-             Tenant tenant = itenantQuery.GetTenantbyId(id);
+            //TODO: modify return a user basic
+            Tenant tenant = itenantQuery.GetTenantbyId(id);
              AdminInfo admin = imapper.Map<AdminInfo>(tenant);
               admin.IsAdmin = itenantlogin.isAdmin(id); 
 
@@ -61,8 +62,9 @@ namespace QRA.UseCases.Queries
         /// <returns></returns>
         public AdminInfo GetAdminWTenants(long id)
         {
+            //TODO: modify return a user basic
             //get admin info
-            AdminInfo admin= new AdminInfo();
+            AdminInfo admin = new AdminInfo();
             Tenant tenant = itenantQuery.GetTenantbyId(id); 
             admin = imapper.Map<AdminInfo>(tenant);
             admin.IsAdmin = itenantlogin.isAdmin(id);
@@ -78,6 +80,7 @@ namespace QRA.UseCases.Queries
         /// <returns></returns>
         public TenantInfo GetTenatInfobyId(long id)
         {
+            //TODO: modify return a user basic
             Tenant tenant = itenantQuery.GetTenantbyId(id);
             TenantInfo tenantInfo = imapper.Map<TenantInfo>(tenant);
             tenantInfo.Roles = iroles.GetRolesbyUser(id);
@@ -92,6 +95,7 @@ namespace QRA.UseCases.Queries
         /// <returns></returns>
         public List<TenantInfo> GetAllTenants()
         {
+            //TODO: modify return a user basic
             List<TenantInfo> tenants = new List<TenantInfo>();
             //get all tenants 
             List<Tenant> tenant = itenantQuery.GetAllTetenants();
@@ -117,6 +121,7 @@ namespace QRA.UseCases.Queries
             /// <returns></returns>
         public List<UserInfo> GetUsersbyTenantID(long id)
         {
+            //TODO: modify return a user basic
             var users = itenantQuery.GetUsersofTenant(id);
             UserInfo usersinfo = new UserInfo();
             List<UserInfo> userInfos = new List<UserInfo>();
@@ -139,6 +144,7 @@ namespace QRA.UseCases.Queries
         /// <returns></returns>
         public UserInfo GetUserInfoByID(long idUser)
         {
+            //TODO: modify return a user basic
             Tenant user = itenantQuery.GetTenantbyId(idUser);
             UserInfo userInfo = imapper.Map<UserInfo>(user);
             userInfo.Roles = iroles.GetRolesbyUser(userInfo.Id);

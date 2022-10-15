@@ -31,8 +31,8 @@ namespace QRA.UseCases.Mapper
                .ForMember(model => model.Administrator, action => action.MapFrom(c => c.IsAdmin))
                .ForMember(model => model.TenantFather, action => action.MapFrom(c => c.IdTenantFather));
 
-            CreateMap<RegisterUserDTO, OktaUserGroup>()
-             .ForMember(model => model.groupIds, action => action.MapFrom(c => c.Group));
+            CreateMap<RegisterUserDTO, OktaUserGroup>();
+           //  .ForMember(model => model.groupIds, action => action.MapFrom(c => c.Group));
 
 
             CreateMap<RegisterUserDTO, Entities.oktaModels.Profile>()
@@ -67,9 +67,9 @@ namespace QRA.UseCases.Mapper
 
             CreateMap<RegisterUserDTO, oktaGroup>();
 
-            CreateMap<RegisterUserDTO, ProfileGroup>()
-             .ForMember(model => model.name, action => action.MapFrom(c => c.Group))
-             .ForMember(model => model.description, action => action.MapFrom(c => c.Group));
+            CreateMap<RegisterUserDTO, ProfileGroup>();
+             //.ForMember(model => model.name, action => action.MapFrom(c => c.Group))
+             //.ForMember(model => model.description, action => action.MapFrom(c => c.Group));
             
 
         }

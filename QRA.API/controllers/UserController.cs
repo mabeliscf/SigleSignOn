@@ -95,11 +95,11 @@ namespace QRA.API.controllers
         {
             //if (!imodelValidation.isFieldsValid(model))
             //    return BadRequest("Please fill form correctly!");
-            var result = ioktaService.CreateUser(model);
+           // var result = ioktaService.CreateUser(model);
             if (!iuser.isNewUser(model.Email))
                 return BadRequest("This user exist, please log in!");
 
-            Tenant user = iuser.CreateAdmin(model);
+            GlobalResponse user = iuser.CreateAdmin(model);
             return Ok(user);
 
         }
@@ -161,7 +161,7 @@ namespace QRA.API.controllers
         [HttpGet("Tenants")]
         public IActionResult GetAllTenants()
         {
-
+            
             var result =  iuserQuery.GetAllTenants();
 
 
@@ -169,18 +169,13 @@ namespace QRA.API.controllers
 
         }
         [AllowAnonymous]
-        [HttpGet("isAdminCreated")]
+        [HttpGet("AdminExist")]
         public bool GetAllAdmins()
         {
             return iuserQuery.GetAllAdmins();
 
         }
-        //TODO: update user method
-        [HttpPost]
-        public bool updateUser()
-        {
-            return false;
-        }
+    
 
         [AllowAnonymous]
         [HttpGet("gettoken")]

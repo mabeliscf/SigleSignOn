@@ -57,7 +57,7 @@ namespace QRA.API.controllers
 
 
         //delete 
-        [HttpDelete("deleteRole")]
+        [HttpPost("deleteRole")]
         public bool DeleteRoles(RolesDTO roles)
         {
             Role role = imapper.Map<Role>(roles);

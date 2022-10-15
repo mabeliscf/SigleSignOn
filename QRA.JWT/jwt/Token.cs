@@ -49,6 +49,7 @@ namespace QRA.JWT.jwt
                 signingCredentials: signIn);
 
             //return token
+            //TODO: return expire time and token 
             response.response = new JwtSecurityTokenHandler().WriteToken(token);
             response.responseNumber = 1;
             return response;

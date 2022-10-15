@@ -57,7 +57,7 @@ namespace QRA.API.controllers
 
 
         //delete 
-        [HttpDelete("deleteDB")]
+        [HttpPost("deleteDB")]
         public bool DeleteDatabase(DatabaseDTO database)
         {
             Db db = imapper.Map<Db>(database);

@@ -116,6 +116,9 @@ namespace QRA.UseCases.commands
             
             try
             {
+                //TODO: tenant father cannto save null
+                //TODO create modelor update 
+                //Todo Get user gruop from tenant father db
                 //map model to okta model
                 OktaUserGroup registerOktaUser = imapper.Map<OktaUserGroup>(registerUser);
                 registerOktaUser.profile = new Profile();
