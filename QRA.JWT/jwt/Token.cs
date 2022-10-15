@@ -34,7 +34,7 @@ namespace QRA.JWT.jwt
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
                 new Claim("UserId", userDB.IdTenant.ToString()),
-                new Claim("DisplayName", userDB.Fullname),
+                new Claim("DisplayName", userDB.FirstName + userDB.FirstName),
                 new Claim("UserName", userDB.Username),
                 new Claim("Email", userDB.Email),
             };

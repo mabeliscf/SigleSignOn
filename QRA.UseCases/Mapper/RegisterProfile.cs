@@ -17,19 +17,26 @@ namespace QRA.UseCases.Mapper
         {
             CreateMap<RegisterDTO, Register>();
             CreateMap<RegisterDTO, Tenant>()
-                 .ForMember(model => model.Fullname, action => action.MapFrom(c => c.FirstName +" "+ c.Lastname));
+               .ForMember(model => model.Username, action => action.MapFrom(c => string.Concat( c.FirstName.Substring(0,1) , c.Lastname.Split(" ", System.StringSplitOptions.None).Count()>0 ? c.Lastname.Split(" ", System.StringSplitOptions.None)[0] : c.Lastname )))
+               .ForMember(model => model.IdTenant, action => action.MapFrom(c => c.id));
+
+
             CreateMap<RegisterDTO, TenantsLogin>()
-               .ForMember(model => model.Administrator, action => action.MapFrom(c => c.IsAdmin));
-              
+               .ForMember(model => model.Administrator, action => action.MapFrom(c => c.IsAdmin))
+               .ForMember(model => model.TenantFather, action => action.MapFrom(c => 0))
+               .ForMember(model => model.IdTenant, action => action.MapFrom(c => c.id));
 
 
+            CreateMap<RegisterUserDTO, Tenant>()
+               .ForMember(model => model.IdTenant, action => action.MapFrom(c => c.id));
 
-            CreateMap<RegisterUserDTO, Tenant>();
 
 
             CreateMap<RegisterUserDTO, TenantsLogin>()
                .ForMember(model => model.Administrator, action => action.MapFrom(c => c.IsAdmin))
-               .ForMember(model => model.TenantFather, action => action.MapFrom(c => c.IdTenantFather));
+               .ForMember(model => model.TenantFather, action => action.MapFrom(c => c.IdTenantFather))
+               .ForMember(model => model.IdTenant, action => action.MapFrom(c => c.id));
+
 
             CreateMap<RegisterUserDTO, OktaUserGroup>();
            //  .ForMember(model => model.groupIds, action => action.MapFrom(c => c.Group));
@@ -67,10 +74,11 @@ namespace QRA.UseCases.Mapper
 
             CreateMap<RegisterUserDTO, oktaGroup>();
 
-            CreateMap<RegisterUserDTO, ProfileGroup>();
-             //.ForMember(model => model.name, action => action.MapFrom(c => c.Group))
-             //.ForMember(model => model.description, action => action.MapFrom(c => c.Group));
-            
+            //group created with basic info of tenant admin for that space
+            CreateMap<RegisterUserDTO, ProfileGroup>()
+                .ForMember(model => model.name, action => action.MapFrom(c => c.Email))
+                .ForMember(model => model.description, action => action.MapFrom(c => c.FirstName + c.Lastname));
+
 
         }
 

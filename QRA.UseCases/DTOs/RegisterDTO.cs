@@ -10,6 +10,8 @@ namespace QRA.UseCases.DTOs
     public class RegisterDTO
     {
         [Required]
+        public long id { get; set; }
+        [Required]
         public string Username { get; set; } = null!;
 
         [Required]

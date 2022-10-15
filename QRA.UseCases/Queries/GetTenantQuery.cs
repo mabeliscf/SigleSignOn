@@ -24,7 +24,11 @@ namespace QRA.UseCases.Queries
             return _context.Tenants.Where(a => a.IdTenant == id).FirstOrDefault();
         }
        
+        public Tenant UserExist(string email)
+        {
+            return _context.Tenants.Where(a => a.Email == email).FirstOrDefault();
 
+        }
         /// <summary>
         /// return all tenants, no user or admin
         /// </summary>

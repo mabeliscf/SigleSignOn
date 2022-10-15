@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QRA.Entities.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,7 @@ namespace QRA.UseCases.contracts
         long getTenantFather(long id);
         bool isAdmin(long id);
         bool adminExist();
+        TenantsLogin GetFather(long id);
+        TenantsLogin getLoginbyID(long id);
     }
 }

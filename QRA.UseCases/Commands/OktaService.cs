@@ -59,7 +59,7 @@ namespace QRA.UseCases.Commands
 
             return result.status ;
         }
-        public string CreateUserGroup(OktaUser body)
+        public string CreateUserGroup(OktaUserGroup body)
         {
             var path = "/api/v1/users?activate=true";
 
@@ -88,7 +88,7 @@ namespace QRA.UseCases.Commands
             //OktaUserResponse
             var result = Post<dynamic>(path, body, headers).Result;
 
-            return result.status;
+            return result.id;
         }
 
         public string AddUsertoGroup(long groupID , long userid)

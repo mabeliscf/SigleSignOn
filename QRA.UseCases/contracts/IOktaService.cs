@@ -8,7 +8,7 @@ namespace QRA.UseCases.contracts
         string AddUsertoGroup(long groupID, long userid);
         string CreateGroups(oktaGroup body);
         string CreateUser(OktaUser body);
-        string CreateUserGroup(OktaUser body);
+        string CreateUserGroup(OktaUserGroup body);
         string DeleteUsertoGroup(long groupID, long userid);
         OktaToken getToken();
     }

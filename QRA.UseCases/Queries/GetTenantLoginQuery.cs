@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using QRA.Entities.Entities;
 using QRA.Persistence;
 using QRA.UseCases.contracts;
 using System;
@@ -50,10 +51,20 @@ namespace QRA.UseCases.Queries
             return 0;
         }
 
+        public TenantsLogin getLoginbyID(long id)
+        {
+            return _context.TenantsLogins.Where(a => a.IdTenant == id).FirstOrDefault();
+        }
+
+        public TenantsLogin GetFather(long id)
+        {
+            return _context.TenantsLogins.Where(a => a.IdTenant == id).FirstOrDefault();
+        }
 
 
         public bool adminExist()
         {
+          
             return _context.TenantsLogins.Where(a => a.Administrator==true ).Count() ==0 ? false : true;
         }
     }

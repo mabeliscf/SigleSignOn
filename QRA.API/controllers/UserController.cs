@@ -93,9 +93,7 @@ namespace QRA.API.controllers
         [HttpPost("register")]
         public IActionResult Register([FromBody] RegisterDTO model)
         {
-            //if (!imodelValidation.isFieldsValid(model))
-            //    return BadRequest("Please fill form correctly!");
-           // var result = ioktaService.CreateUser(model);
+            
             if (!iuser.isNewUser(model.Email))
                 return BadRequest("This user exist, please log in!");
 

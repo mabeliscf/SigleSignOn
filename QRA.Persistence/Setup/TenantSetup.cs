@@ -27,10 +27,21 @@ namespace QRA.Persistence.Setup
                     .IsUnicode(false)
                     .HasColumnName("email");
 
-                entity.Property(e => e.Fullname)
+                entity.Property(e => e.FirstName)
                     .HasMaxLength(150)
                     .IsUnicode(false)
-                    .HasColumnName("fullname");
+                    .HasColumnName("firstname");
+
+                entity.Property(e => e.LastName)
+                   .HasMaxLength(150)
+                   .IsUnicode(false)
+                   .HasColumnName("lastname");
+                entity.Property(e => e.TenantSpaceID)
+               .HasMaxLength(150)
+               .IsUnicode(false)
+               .HasColumnName("tenantSpaceID");
+
+                
 
                 entity.Property(e => e.Phone)
                     .HasMaxLength(20)
