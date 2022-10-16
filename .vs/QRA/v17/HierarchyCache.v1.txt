@@ -1,106 +1,227 @@
-﻿++Solution 'QRA' ‎(4 of 4 projects)
+﻿++Solution 'QRA' ‎(5 of 5 projects)
 i:{00000000-0000-0000-0000-000000000000}:QRA.sln
 ++Source
 i:{00000000-0000-0000-0000-000000000000}:Source
-++QRA.UseCases
-i:{afb59566-1789-4c6b-baa2-d711a386f527}:QRA.UseCases
+++QRA.Entities
+i:{afb59566-1789-4c6b-baa2-d711a386f527}:QRA.Entities
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\bin\debug\net6.0\qra.entities.dll
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\bin\debug\net6.0\qra.entities.dll
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\qra.entities.csproj
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\qra.entities.csproj
 ++Dependencies
-i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:>593
-i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:>538
-i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:>426
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>235
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:>590
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:>588
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:>589
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:>591
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>804
 ++Analyzers
-i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:analyzers
-i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:analyzers
 i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:analyzers
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:analyzers
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:analyzers
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:analyzers
 i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:analyzers
 ++Frameworks
-i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:frameworks
-i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:frameworks
 i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:frameworks
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:frameworks
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:frameworks
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:frameworks
 i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:frameworks
+++Microsoft.NETCore.App
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\microsoft.netcore.app
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\source\repos\siglesignon\qra.persistence\microsoft.netcore.app
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\microsoft.netcore.app
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:c:\users\raemil corniel\source\repos\siglesignon\qra.jwt\microsoft.netcore.app
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\microsoft.netcore.app
+++Entities
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\entities\
+++Db.cs
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\entities\db.cs
+++DbAccess.cs
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\entities\dbaccess.cs
+++Role.cs
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\entities\role.cs
+++Tenant.cs
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\entities\tenant.cs
+++TenantsLogin.cs
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\entities\tenantslogin.cs
+++TenantsRole.cs
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\entities\tenantsrole.cs
+++User.cs
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\entities\user.cs
+++UserRole.cs
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\entities\userrole.cs
+++Models
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\models\
+++GlobalResponse.cs
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\models\globalresponse.cs
+++Register.cs
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\models\register.cs
 ++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
-i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
 i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
 i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
 ++Microsoft.CodeAnalysis.NetAnalyzers
-i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
 i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
 i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
 ++System.Text.Json.SourceGeneration
-i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
 i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
 i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-++Microsoft.NETCore.App
-i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\documents\qra challenge\qra\qra.usecases\microsoft.netcore.app
-i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\documents\qra challenge\qra\qra.persistence\microsoft.netcore.app
-i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\documents\qra challenge\qra\qra.entities\microsoft.netcore.app
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\microsoft.netcore.app
 ++QRA.Persistence
 i:{afb59566-1789-4c6b-baa2-d711a386f527}:QRA.Persistence
-++Setup
-i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\documents\qra challenge\qra\qra.persistence\setup\
-++TenantsSetup.cs
-i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\documents\qra challenge\qra\qra.persistence\setup\tenantssetup.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.persistence\qra.persistence.csproj
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.persistence\qra.persistence.csproj
 ++Packages
 i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:packages
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:packages
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:packages
 i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:packages
+++Projects
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:projects
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:projects
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:projects
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:projects
+++Setup
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\source\repos\siglesignon\qra.persistence\setup\
+++DbAccessSetup.cs
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\source\repos\siglesignon\qra.persistence\setup\dbaccesssetup.cs
+++DBSetup.cs
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\source\repos\siglesignon\qra.persistence\setup\dbsetup.cs
+++RolesSetup.cs
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\source\repos\siglesignon\qra.persistence\setup\rolessetup.cs
+++TenantLoginSetup.cs
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\source\repos\siglesignon\qra.persistence\setup\tenantloginsetup.cs
+++TenantRoleSetup.cs
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\source\repos\siglesignon\qra.persistence\setup\tenantrolesetup.cs
+++TenantSetup.cs
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\source\repos\siglesignon\qra.persistence\setup\tenantsetup.cs
+++TenantUserSetup.cs
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\source\repos\siglesignon\qra.persistence\setup\tenantusersetup.cs
+++UserRoleSetup.cs
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\source\repos\siglesignon\qra.persistence\setup\userrolesetup.cs
+++QRAchallengeContext.cs
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\source\repos\siglesignon\qra.persistence\qrachallengecontext.cs
 ++Microsoft.EntityFrameworkCore.Analyzers
 i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.9\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.9\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
 i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.9\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
 ++Microsoft.Extensions.Logging.Generators
 i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:c:\users\raemil corniel\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
 i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
 ++Microsoft.EntityFrameworkCore (6.0.9)
-i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:>697
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:>847
 ++Microsoft.EntityFrameworkCore.Proxies (6.0.9)
-i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:>700
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>702
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:>849
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>818
 ++Microsoft.EntityFrameworkCore.SqlServer (6.0.9)
-i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:>704
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>705
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:>848
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>817
 ++Microsoft.EntityFrameworkCore.Tools (6.0.9)
-i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:>706
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>707
-++QRA.Entities
-i:{afb59566-1789-4c6b-baa2-d711a386f527}:QRA.Entities
-++Entities
-i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\documents\qra challenge\qra\qra.entities\entities\
-++Tenants.cs
-i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\documents\qra challenge\qra\qra.entities\entities\tenants.cs
+i:{8aa2ecc3-08b2-45b2-8991-63e6f26076da}:>851
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>822
+++QRA.UseCases
+i:{afb59566-1789-4c6b-baa2-d711a386f527}:QRA.UseCases
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\qra.usecases.csproj
+++Commands
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\commands\
+++ModelValidation.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\commands\modelvalidation.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\helpers\modelvalidation.cs
+++TenantService.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\commands\tenantservice.cs
+++UserService.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\commands\userservice.cs
+++contracts
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\contracts\
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:c:\users\raemil corniel\source\repos\siglesignon\qra.jwt\contracts\
+++ITenantService.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\contracts\itenantservice.cs
+++IUserService.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\contracts\iuserservice.cs
+++DTOs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\dtos\
+++LoginDTO.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\dtos\logindto.cs
+++RegisterDTO.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\dtos\registerdto.cs
+++RegisterTenantDTO.cs
+++TeantLoginDTO.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\dtos\teantlogindto.cs
+++TenantDTO.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\dtos\tenantdto.cs
+++Helpers
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\helpers\
+++IModelValidation.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\helpers\imodelvalidation.cs
+++Mapper
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\mapper\
+++Queries
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\queries\
+++GetTenantQueries.cs
+++UserQueries.cs
+++AutoMapper.Extensions.Microsoft.DependencyInjection (12.0.0)
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:>1038
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>1039
+++QRA.JWT
+i:{afb59566-1789-4c6b-baa2-d711a386f527}:QRA.JWT
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.jwt\qra.jwt.csproj
+++IToken.cs
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:c:\users\raemil corniel\source\repos\siglesignon\qra.jwt\contracts\itoken.cs
+++jwt
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:c:\users\raemil corniel\source\repos\siglesignon\qra.jwt\jwt\
+++Token.cs
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:c:\users\raemil corniel\source\repos\siglesignon\qra.jwt\jwt\token.cs
+++Microsoft.Extensions.Configuration.Abstractions (6.0.0)
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:>833
+++System.IdentityModel.Tokens.Jwt (6.23.1)
+i:{f7ffc4af-ecde-4868-b482-c79da57aff02}:>834
 ++QRA.API
 i:{afb59566-1789-4c6b-baa2-d711a386f527}:QRA.API
 ++Connected Services 
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>236
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>805
+++Microsoft identity platform
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>989
+++SQL Server Database
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>991
 ++Properties
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\properties\
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\properties\
 ++launchSettings.json
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\properties\launchsettings.json
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\properties\launchsettings.json
+++Startup.cs
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\properties\startup.cs
 ++wwwroot
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\
-++controllers
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\controllers\
-++appsettings.json
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\appsettings.json
-++Program.cs
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\program.cs
-++No service dependencies discovered
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>237
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\
 ++css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\css\
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\css\
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\
 ++js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\js\
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\js\
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\js\
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\js\
 ++lib
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\
 ++favicon.ico
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\favicon.ico
-++appsettings.Development.json
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\appsettings.development.json
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\favicon.ico
+++controllers
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\controllers\
+++LoginController.cs
+++UserController.cs
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\controllers\usercontroller.cs
+++appsettings.json
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\appsettings.json
+++Program.cs
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\program.cs
+++For applications that authenticate users with the Microsoft identity platform (Azure AD, Azure AD B2C and personal Microsoft accounts).
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>990
+++SQL Server Database dependency is detected
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>992
 ++Microsoft.AspNetCore.Analyzers
 i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
 ++Microsoft.AspNetCore.App.Analyzers
@@ -116,133 +237,211 @@ i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\program files\dotnet\sdk\6.0.201\sdk
 ++Microsoft.NET.Sdk.Razor.SourceGenerators
 i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
 ++Microsoft.AspNetCore.App
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\microsoft.aspnetcore.app
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\microsoft.aspnetcore.app
+++Microsoft.AspNetCore.Authentication.JwtBearer (6.0.9)
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>821
+++Swashbuckle.AspNetCore.Swagger (6.4.0)
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>819
+++Swashbuckle.AspNetCore.SwaggerGen (6.4.0)
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>820
+++Swashbuckle.AspNetCore.SwaggerUI (6.4.0)
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>823
 ++site.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\css\site.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\css\site.css
 ++site.js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\js\site.js
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\js\site.js
 ++bootstrap
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\
 ++jquery
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery\
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery\
 ++jquery-validation
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery-validation\
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery-validation\
 ++jquery-validation-unobtrusive
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery-validation-unobtrusive\
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery-validation-unobtrusive\
+++appsettings.Development.json
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\appsettings.development.json
 ++dist
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery\dist\
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery-validation\dist\
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery\dist\
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery-validation\dist\
 ++LICENSE
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\license
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\license
 ++LICENSE.txt
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery\license.txt
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery-validation-unobtrusive\license.txt
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery\license.txt
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery-validation-unobtrusive\license.txt
 ++LICENSE.md
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery-validation\license.md
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery-validation\license.md
 ++jquery.validate.unobtrusive.js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 ++jquery.js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery\dist\jquery.js
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery\dist\jquery.js
 ++additional-methods.js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery-validation\dist\additional-methods.js
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery-validation\dist\additional-methods.js
 ++jquery.validate.js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery-validation\dist\jquery.validate.js
 ++jquery.validate.unobtrusive.min.js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 ++bootstrap.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.css
 ++bootstrap-grid.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 ++bootstrap-reboot.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
 ++bootstrap-utilities.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
 ++bootstrap.js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.js
 ++jquery.min.js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery\dist\jquery.min.js
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery\dist\jquery.min.js
 ++additional-methods.min.js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
 ++jquery.validate.min.js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
 ++bootstrap.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 ++bootstrap.min.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
 ++bootstrap.rtl.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
 ++bootstrap-grid.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 ++bootstrap-grid.min.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
 ++bootstrap-grid.rtl.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
 ++bootstrap-reboot.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
 ++bootstrap-reboot.min.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
 ++bootstrap-reboot.rtl.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
 ++bootstrap-utilities.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
 ++bootstrap-utilities.min.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
 ++bootstrap-utilities.rtl.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
 ++bootstrap.bundle.js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
 ++bootstrap.esm.js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
 ++bootstrap.js.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
 ++bootstrap.min.js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 ++jquery.min.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\jquery\dist\jquery.min.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\jquery\dist\jquery.min.map
 ++bootstrap.min.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
 ++bootstrap.rtl.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
 ++bootstrap.rtl.min.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
 ++bootstrap-grid.min.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
 ++bootstrap-grid.rtl.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
 ++bootstrap-grid.rtl.min.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
 ++bootstrap-reboot.min.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
 ++bootstrap-reboot.rtl.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
 ++bootstrap-reboot.rtl.min.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
 ++bootstrap-utilities.min.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
 ++bootstrap-utilities.rtl.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
 ++bootstrap-utilities.rtl.min.css
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
 ++bootstrap.bundle.js.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
 ++bootstrap.bundle.min.js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
 ++bootstrap.esm.js.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
 ++bootstrap.esm.min.js
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
 ++bootstrap.min.js.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 ++bootstrap.rtl.min.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
 ++bootstrap-grid.rtl.min.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
 ++bootstrap-reboot.rtl.min.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
 ++bootstrap-utilities.rtl.min.css.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
 ++bootstrap.bundle.min.js.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
 ++bootstrap.esm.min.js.map
-i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\documents\qra challenge\qra\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+++RegisterProfile.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\mapper\registerprofile.cs
+++TenantCrud.cs
+++TenantRepository.cs
+++TenantsLoginService.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\commands\tenantsloginservice.cs
+++ITenantsLoginService.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\contracts\itenantsloginservice.cs
+++UserLogged.cs
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\models\userlogged.cs
+++UserProfile.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\mapper\userprofile.cs
+++roles.cs
+++rolesService.cs
+++RolesService.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\commands\rolesservice.cs
+++DatabaseService.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\commands\databaseservice.cs
+++IRolesService.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\contracts\irolesservice.cs
+++IDatabaseService.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\contracts\idatabaseservice.cs
+++RegisterUserDTO.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\dtos\registeruserdto.cs
+++DatabaseController.cs
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\controllers\databasecontroller.cs
+++RolesController.cs
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:c:\users\raemil corniel\source\repos\siglesignon\qra.api\controllers\rolescontroller.cs
+++RolesDTO.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\dtos\rolesdto.cs
+++RolesProfile.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\mapper\rolesprofile.cs
+++GetRolesQuery.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\queries\getrolesquery.cs
+++IGetRolesQuery.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\contracts\igetrolesquery.cs
+++DatabaseProfile.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\mapper\databaseprofile.cs
+++DatabaseDTO.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\dtos\databasedto.cs
+++getDatabaseQueries.cs
+++getDatabaseQuery.cs
+++GetTenantQuery.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\queries\gettenantquery.cs
+++UserQuery.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\queries\userquery.cs
+++GetDatabaseQuery.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\queries\getdatabasequery.cs
+++IGetDatabaseQuery.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\contracts\igetdatabasequery.cs
+++UserInfo.cs
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\models\userinfo.cs
+++TenantInfo.cs
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\models\tenantinfo.cs
+++UserBasics.cs
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\models\userbasics.cs
+++AdminInfo.cs
+i:{c0390634-a5fb-48b2-980c-6969440a8d1c}:c:\users\raemil corniel\source\repos\siglesignon\qra.entities\models\admininfo.cs
+++IGetTenantQuery.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\contracts\igettenantquery.cs
+++IUserQuery.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\contracts\iuserquery.cs
+++GetTenantLoginQuery.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\queries\gettenantloginquery.cs
+++IGetTenantLoginQuery.cs
+i:{dbd0c1f4-a0e1-42b1-8d4f-417b2aa699ac}:c:\users\raemil corniel\source\repos\siglesignon\qra.usecases\contracts\igettenantloginquery.cs
+++Okta.AspNetCore (4.2.1)
+i:{65c4b5a1-3453-49f6-96a6-c71c029896af}:>1745
