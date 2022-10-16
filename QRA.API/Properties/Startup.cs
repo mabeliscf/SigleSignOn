@@ -89,7 +89,7 @@ namespace QRA.API
             services.AddHttpClient<IOktaService, OktaService>("okta",
                httpClient =>
                {
-                   httpClient.BaseAddress = new Uri(Configuration["BaseUrls:okta"]);
+                   httpClient.BaseAddress = new Uri(Configuration["Okta:OktaDomain"]);
                });
 
             //Jwt & okta auth authentication
