@@ -28,7 +28,9 @@ namespace QRA.UseCases.Mapper
 
 
             CreateMap<RegisterUserDTO, Tenant>()
-               .ForMember(model => model.IdTenant, action => action.MapFrom(c => c.id));
+               .ForMember(model => model.IdTenant, action => action.MapFrom(c => c.id))
+               .ForMember(model => model.Username, action => action.MapFrom(c => string.Concat(c.FirstName.Substring(0, 1), c.Lastname.Split(" ", System.StringSplitOptions.None).Count() > 0 ? c.Lastname.Split(" ", System.StringSplitOptions.None)[0] : c.Lastname)));
+               
 
 
 
@@ -39,15 +41,15 @@ namespace QRA.UseCases.Mapper
 
 
             CreateMap<RegisterUserDTO, OktaUserGroup>();
-           //  .ForMember(model => model.groupIds, action => action.MapFrom(c => c.Group));
+            //  .ForMember(model => model.groupIds, action => action.MapFrom(c => c.Group));
 
 
             CreateMap<RegisterUserDTO, Entities.oktaModels.Profile>()
              .ForMember(model => model.firstName, action => action.MapFrom(c => c.FirstName))
              .ForMember(model => model.lastName, action => action.MapFrom(c => c.Lastname))
              .ForMember(model => model.email, action => action.MapFrom(c => c.Email))
-             .ForMember(model => model.login, action => action.MapFrom(c => c.Username))
-             .ForMember(model => model.mobilePhone, action => action.MapFrom(c => c.Phone));
+             .ForMember(model => model.login, action => action.MapFrom(c => c.Email));
+            // .ForMember(model => model.mobilePhone, action => action.MapFrom(c => c.Phone));
 
             CreateMap<RegisterUserDTO, Credentials>();
 
@@ -57,13 +59,13 @@ namespace QRA.UseCases.Mapper
 
 
             CreateMap<RegisterDTO, OktaUser>();
-          
+
             CreateMap<RegisterDTO, Entities.oktaModels.Profile>()
              .ForMember(model => model.firstName, action => action.MapFrom(c => c.FirstName))
              .ForMember(model => model.lastName, action => action.MapFrom(c => c.Lastname))
              .ForMember(model => model.email, action => action.MapFrom(c => c.Email))
-             .ForMember(model => model.login, action => action.MapFrom(c => c.Username))
-             .ForMember(model => model.mobilePhone, action => action.MapFrom(c => c.Phone));
+             .ForMember(model => model.login, action => action.MapFrom(c => c.Username));
+           // .ForMember(model => model.mobilePhone, action => action.MapFrom(c => c.Phone));
 
             CreateMap<RegisterDTO, Credentials>();
 
@@ -78,6 +80,12 @@ namespace QRA.UseCases.Mapper
             CreateMap<RegisterUserDTO, ProfileGroup>()
                 .ForMember(model => model.name, action => action.MapFrom(c => c.Email))
                 .ForMember(model => model.description, action => action.MapFrom(c => c.FirstName + c.Lastname));
+
+
+            CreateMap<TenantInfo , RegisterUserDTO>();
+            CreateMap<UserBasics , RegisterUserDTO>()
+                .ForMember(model => model.IdTenantFather, action => action.MapFrom(c => c.TenantFather));
+            CreateMap<UserBasics, RegisterDTO>();
 
 
         }

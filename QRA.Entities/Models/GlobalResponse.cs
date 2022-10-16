@@ -10,6 +10,6 @@ namespace QRA.Entities.Models
     {
 
         public string response { get; set; }
-        public int responseNumber { get; set; }
+        public double responseNumber { get; set; }
     }
 }

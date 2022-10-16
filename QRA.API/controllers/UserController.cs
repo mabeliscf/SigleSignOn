@@ -59,6 +59,7 @@ namespace QRA.API.controllers
             //map return 
             UserLogged userLogged = imapper.Map<UserLogged>(user);
             userLogged.Token = response.response;
+            userLogged.expiresIn = response.responseNumber;
 
             return Ok(userLogged);
         }
@@ -114,7 +115,7 @@ namespace QRA.API.controllers
             if (!imodelValidation.isFieldsValid(model))
                 return BadRequest("Please fill form correctly!");
 
-            if (!iuser.isNewUser(model.Email))
+            if (!iuser.isNewUser(model.Email) && model.id==0)
                 return BadRequest("This user exist, please log in!");
 
             GlobalResponse response = iuser.CreateUser(model);
@@ -124,7 +125,7 @@ namespace QRA.API.controllers
                 return BadRequest(response.response);
             }
 
-            return Ok(response.response);
+            return Ok(response);
         }
         /// <summary>
         /// get user with rol and db acces 

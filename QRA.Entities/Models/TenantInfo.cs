@@ -12,7 +12,7 @@ namespace QRA.Entities.Models
 
 
         public List<Role> Roles { get; set; }
-        public List<Db> Databases { get; set; }
+        public List<Db> Database { get; set; }
 
         public List<UserInfo> Users { get; set; }
     }

@@ -45,13 +45,14 @@ namespace QRA.JWT.jwt
                 issuer: iconfiguration["JWT.Issuer"],
                 audience: iconfiguration["JWT:Audience"],
                 claims,
-                expires: DateTime.UtcNow.AddDays(3),
+                expires: DateTime.UtcNow.AddMinutes(20),
                 signingCredentials: signIn);
 
             //return token
-            //TODO: return expire time and token 
+            
             response.response = new JwtSecurityTokenHandler().WriteToken(token);
-            response.responseNumber = 1;
+            TimeSpan ts = TimeSpan.FromTicks(token.ValidTo.Ticks);
+            response.responseNumber = ts.TotalSeconds;
             return response;
         }
     

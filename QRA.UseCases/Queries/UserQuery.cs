@@ -84,7 +84,7 @@ namespace QRA.UseCases.Queries
             Tenant tenant = itenantQuery.GetTenantbyId(id);
             TenantInfo tenantInfo = imapper.Map<TenantInfo>(tenant);
             tenantInfo.Roles = iroles.GetRolesbyUser(id);
-            tenantInfo.Databases = idatabase.GetDatabasebyUser(id);
+            tenantInfo.Database = idatabase.GetDatabasebyUser(id);
             tenantInfo.Users = GetUsersbyTenantID(id);
             tenantInfo.IsAdmin = itenantlogin.isAdmin(id);
             return tenantInfo;
@@ -100,11 +100,20 @@ namespace QRA.UseCases.Queries
             //get all tenants 
             List<Tenant> tenant = itenantQuery.GetAllTetenants();
             TenantInfo tenantInfo = new TenantInfo();
+            
             tenant.ForEach(a => {
 
                 tenantInfo = imapper.Map<TenantInfo>(a);
+                TenantsLogin tenatlog =  itenantlogin.getLoginbyID(a.IdTenant);
+                tenantInfo.isTenant = (tenatlog.TenantFather == 0 && tenatlog.Administrator == false) ? true : false;
+                tenantInfo.IsAdmin = tenatlog.Administrator;
+                tenantInfo.isUser = tenatlog.TenantFather != 0 ? true : false;
+                tenantInfo.TenantFather = Convert.ToInt32( tenatlog.TenantFather);
+                tenantInfo.LoginType = tenatlog.LoginType;
+
+
                 tenantInfo.Roles = iroles.GetRolesbyUser(a.IdTenant);
-                tenantInfo.Databases = idatabase.GetDatabasebyUser(a.IdTenant);
+                tenantInfo.Database = idatabase.GetDatabasebyUser(a.IdTenant);
                 tenantInfo.Users = GetUsersbyTenantID(a.IdTenant);
                 tenantInfo.IsAdmin = itenantlogin.isAdmin(a.IdTenant);
 

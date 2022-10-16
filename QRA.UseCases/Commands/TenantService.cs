@@ -42,7 +42,8 @@ namespace QRA.UseCases.commands
         {
             try
             {
-                _context.Entry(tenant).State= Microsoft.EntityFrameworkCore.EntityState.Modified;
+                var entry = _context.Tenants.Find(tenant.IdTenant);
+                _context.Entry(entry).CurrentValues.SetValues(tenant);
                 _context.SaveChanges();
             }
             catch (Exception e)
@@ -93,7 +94,8 @@ namespace QRA.UseCases.commands
         {
             try
             {
-                _context.Entry(tenantsRole).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                var entry = _context.TenantsRoles.Find(tenantsRole.IdTenantRole);
+                _context.Entry(entry).CurrentValues.SetValues(tenantsRole);
                 _context.SaveChanges();
             }
             catch (Exception e)
@@ -142,6 +144,8 @@ namespace QRA.UseCases.commands
         {
             try
             {
+                var entry = _context.DbAccesses.Find(dbAccess.IdDbAccess);
+                _context.Entry(entry).CurrentValues.SetValues(dbAccess);
                 _context.Entry(dbAccess).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                 _context.SaveChanges();
             }

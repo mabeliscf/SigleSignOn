@@ -12,6 +12,6 @@ namespace QRA.UseCases.contracts
         List<Tenant> GetAllTetenants();
         Tenant GetTenantbyId(long id);
         List<Tenant> GetUsersofTenant(long id);
-        Tenant UserExist(string email);
+        bool UserExist(string email);
     }
 }

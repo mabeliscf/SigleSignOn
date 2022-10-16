@@ -27,6 +27,16 @@ namespace QRA.UseCases.Mapper
 
             CreateMap<Tenant,TenantInfo>()
                 .ForMember(model => model.Id, action => action.MapFrom(c => c.IdTenant));
+            CreateMap<TenantsLogin, TenantInfo>()
+        .ForMember(model => model.LoginType, action => action.MapFrom(c => c.LoginType))
+        .ForMember(model => model.IsAdmin, action => action.MapFrom(c => c.Administrator))
+        .ForMember(model => model.TenantFather, action => action.MapFrom(c => c.TenantFather))
+        .ForMember(model => model.isUser, action => action.MapFrom(c => c.TenantFather != 0 ? true : false))
+        .ForMember(model => model.isTenant, action => action.MapFrom(c => (c.TenantFather == 0 && c.Administrator==false ) ? true : false));
+
+
+
+
 
             CreateMap<Tenant, UserInfo>()
                .ForMember(model => model.Id, action => action.MapFrom(c => c.IdTenant));

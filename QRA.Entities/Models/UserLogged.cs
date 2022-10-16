@@ -14,6 +14,6 @@ namespace QRA.Entities.Models
         public string Token { get; set; }
         
       
-        public long expiresIn { get; set; }
+        public double expiresIn { get; set; }
     }
 }

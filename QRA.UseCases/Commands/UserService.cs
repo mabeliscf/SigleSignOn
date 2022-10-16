@@ -35,6 +35,7 @@ namespace QRA.UseCases.commands
             iokta = okta;
             iTenantLoginQuery = tenantLoginQuery;
             iuserQuery = userQuery;
+            iTenantQuery = TenantQuery;
         }
 
         /// <summary>
@@ -51,7 +52,8 @@ namespace QRA.UseCases.commands
             if (user == null) return null;
 
             //get password 
-            var credential = _context.TenantsLogins.Where(a => a.IdTenant == user.IdTenant && a.LoginType==1).FirstOrDefault();
+            //TODO when admin is created  && a.LoginType==1
+            var credential = _context.TenantsLogins.Where(a => a.IdTenant == user.IdTenant).FirstOrDefault();
             if (credential == null) return null;
             //validate password if hass y secret 
 
@@ -87,8 +89,9 @@ namespace QRA.UseCases.commands
             GlobalResponse global = new GlobalResponse();
             try
             {
-                
+
                 //create user in tenants 
+                registerDTO.Logintype = 1;
                 Tenant register = CreateBasicUser(registerDTO,"");
                 global.responseNumber = 1;
                 global.response = "Created Succesfull";
@@ -121,8 +124,8 @@ namespace QRA.UseCases.commands
             GlobalResponse response = new GlobalResponse();
 
             //identify if is Create or update
-            Tenant tenant = iTenantQuery.UserExist(registerUser.Email);
-            if (tenant== null)
+
+            if (!iTenantQuery.UserExist(registerUser.Email))
             {
                 //identify if is tenant or user 
                 if (registerUser.IsUser)
@@ -173,10 +176,9 @@ namespace QRA.UseCases.commands
                     global = CreateOktaUserGroup(registerUser, groupID);
 
                 }
-                else 
-                    {
-                        //create in local db user with okta details
-                        Tenant tenant = CreateBasicUser(registerUser, groupID);
+               
+                    //create in local db user with okta details
+                    Tenant tenant =CreateBasicUser(registerUser, groupID);
                         global.response = "UserCreated";
                         global.responseNumber = 1;
                         if (tenant.IdTenant == 0)
@@ -198,7 +200,7 @@ namespace QRA.UseCases.commands
                             tenantService.createTenantRole(tenant.IdTenant, a.IdRole);
 
                         });
-                    }
+                    
             }
             catch (Exception e)
             {
@@ -248,7 +250,6 @@ namespace QRA.UseCases.commands
 
                     });
                 }
-                
             }
             catch (Exception e)
             {
@@ -267,7 +268,7 @@ namespace QRA.UseCases.commands
         {
             GlobalResponse global = new GlobalResponse();
             string groupid = "";
-            TenantInfo tenantinfo = iuserQuery.GetTenatInfobyId(registerUser.id);
+            TenantInfo tenantinfo =  iuserQuery.GetTenatInfobyId(registerUser.id);
 
             //check if login type change 
             if(registerUser.Logintype!= tenantinfo.LoginType && registerUser.Logintype == 2)
@@ -278,19 +279,18 @@ namespace QRA.UseCases.commands
                 global= CreateOktaUserGroup(registerUser, groupid);
 
                 //get  user of tenant and change type login 
-                global = CreateUsersOkta(registerUser.id, groupid);
+                global = CreateUsersOkta(registerUser.id, groupid, registerUser.Password);
 
 
             }
-            else
-            {
+            
                 //update tenant 
-                Tenant tenant = imapper.Map<Tenant>(registerUser);
+                Tenant tenant=imapper.Map<Tenant>(registerUser);
                 tenant.TenantSpaceID = groupid;
                 tenantService.update(tenant);
 
                 //update tenant login 
-                TenantsLogin tenantsLogin = iTenantLoginQuery.getLoginbyID(registerUser.id);
+                TenantsLogin tenantsLogin =   iTenantLoginQuery.getLoginbyID(registerUser.id);
                 if (!validatePassword(registerUser.Password, tenantsLogin.PasswordEncrypted, tenantsLogin.PasswordSalt))
                 {
                     byte[] hash, salt;
@@ -305,17 +305,35 @@ namespace QRA.UseCases.commands
                 //update roles
                 registerUser.Roles.ForEach(a =>
                 {
-                    tenantService.updateTenantRole(a);
+                    if(tenantinfo.Roles.Where(z=> z.IdRole == a.IdRole).FirstOrDefault()!= null)
+                    {
+                        tenantService.updateTenantRole(a);
+
+                    }else
+                    {
+                        tenantService.createTenantRole(a.IdTenant,a.IdRole);
+                    }
                 });
 
                 if (registerUser.IsUser == false){
                     registerUser.Databases.ForEach(a =>
                     {
-                        tenantService.updateTenantDBAccess(a);
+                        if (tenantinfo.Database.Where(z => z.IdDb == a.IdDb).FirstOrDefault() != null)
+                        {
+                            tenantService.updateTenantDBAccess(a);
+
+                        }
+                        else
+                        {
+                            tenantService.createTenantDBAccess(a.IdTenant, a.IdDb);
+                        }
+                      
                     });
                 }
 
-            }
+           
+            global.responseNumber = 1;
+            global.response = "User Updated!";
             return global;
         }
 
@@ -335,7 +353,7 @@ namespace QRA.UseCases.commands
             tenantService.update(tenant);
 
             //update tenant login 
-            TenantsLogin tenantsLogin = iTenantLoginQuery.getLoginbyID(registerUser.id);
+            TenantsLogin tenantsLogin =   iTenantLoginQuery.getLoginbyID(registerUser.id);
             if (!validatePassword(registerUser.Password, tenantsLogin.PasswordEncrypted, tenantsLogin.PasswordSalt))
             {
                 byte[] hash, salt;
@@ -347,18 +365,38 @@ namespace QRA.UseCases.commands
             tenantsLoginService.update(tenantsLogin);
 
             //update roles
+            //update roles
             registerUser.Roles.ForEach(a =>
             {
-                tenantService.updateTenantRole(a);
+                if (tenantinfo.Roles.Where(z => z.IdRole == a.IdRole).FirstOrDefault() != null)
+                {
+                    tenantService.updateTenantRole(a);
+
+                }
+                else
+                {
+                    tenantService.createTenantRole(a.IdTenant, a.IdRole);
+                }
             });
 
             if (registerUser.IsUser == false)
             {
                 registerUser.Databases.ForEach(a =>
                 {
-                    tenantService.updateTenantDBAccess(a);
+                    if (tenantinfo.Database.Where(z => z.IdDb == a.IdDb).FirstOrDefault() != null)
+                    {
+                        tenantService.updateTenantDBAccess(a);
+
+                    }
+                    else
+                    {
+                        tenantService.createTenantDBAccess(a.IdTenant, a.IdDb);
+                    }
+
                 });
             }
+            global.responseNumber = 1;
+            global.response = "User Updated!";
             return global;
         }
         /// <summary>
@@ -371,8 +409,17 @@ namespace QRA.UseCases.commands
         {
             GlobalResponse global = new GlobalResponse( );
             //create user in okta with group created 
-            OktaUserGroup oktaUserGroup = imapper.Map<OktaUserGroup>(registerUser);
-            oktaUserGroup.groupIds[oktaUserGroup.groupIds.Length + 1] = groupid;
+            OktaUserGroup oktaUserGroup = new OktaUserGroup();
+            oktaUserGroup.profile = new Profile();
+            oktaUserGroup.profile=  imapper.Map<Profile>(registerUser);
+            oktaUserGroup.credentials = new Credentials();
+            oktaUserGroup.credentials.password = new Password();
+            oktaUserGroup.credentials.password = imapper.Map<Password>(registerUser);
+            string[] d = { groupid };
+
+            oktaUserGroup.groupIds = d;
+         
+
             var status = iokta.CreateUserGroup(oktaUserGroup);
 
             if (status == "LOCKED_OUT" || status == "DEPROVISIONED")
@@ -392,22 +439,28 @@ namespace QRA.UseCases.commands
         public string  CreateGroupsOkta(RegisterUserDTO registerUser)
         {
             //create group in okta
-            oktaGroup group = imapper.Map<oktaGroup>(registerUser);
+            oktaGroup group = new oktaGroup();
+            group.profile = new ProfileGroup();
+            group.profile= imapper.Map<ProfileGroup>(registerUser);
             return  iokta.CreateGroups(group); ;
         }
 
         //create all users for ockta, user when tentant update
-        public GlobalResponse CreateUsersOkta(long id, string grupoid)
+        public GlobalResponse CreateUsersOkta(long id, string grupoid,string password)
         {
             GlobalResponse global = new GlobalResponse();
             //get all users 
-            List<UserInfo> tenantInfo = iuserQuery.GetUsersbyTenantID(id);
+            List<UserInfo> tenantInfo = new List<UserInfo>();
+            tenantInfo= iuserQuery.GetUsersbyTenantID(id);
             RegisterUserDTO registerUser = new RegisterUserDTO();
 
             try
             {
                 tenantInfo.ForEach(user => {
-                    registerUser = imapper.Map<RegisterUserDTO>(user);
+                    registerUser.FirstName = user.FirstName;
+                    registerUser.Lastname = user.LastName;
+                    registerUser.Email = user.Email;
+                    registerUser.Password = password;
                     CreateOktaUserGroup(registerUser, grupoid);
                 });
 
@@ -553,5 +606,7 @@ namespace QRA.UseCases.commands
                 hash= sec.ComputeHash(Encoding.UTF8.GetBytes(password));
             }
         }
+
+    
     }
 }

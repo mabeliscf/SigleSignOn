@@ -21,12 +21,14 @@ namespace QRA.UseCases.Queries
         /// <returns></returns>
         public Tenant GetTenantbyId(long id)
         {
+
             return _context.Tenants.Where(a => a.IdTenant == id).FirstOrDefault();
         }
        
-        public Tenant UserExist(string email)
+        public bool UserExist(string email)
         {
-            return _context.Tenants.Where(a => a.Email == email).FirstOrDefault();
+            var value = _context.Tenants.Where(a => a.Email.Trim() == email).FirstOrDefault();
+            return value==null? false : true;
 
         }
         /// <summary>
@@ -39,7 +41,7 @@ namespace QRA.UseCases.Queries
                     join b in _context.TenantsLogins
                     on a.IdTenant equals b.IdTenant
                     where b.Administrator == false
-                    && b.TenantFather == null || b.TenantFather == 0
+                    && b.TenantFather != null //|| b.TenantFather == 0
                     select a).ToList();
         }
 

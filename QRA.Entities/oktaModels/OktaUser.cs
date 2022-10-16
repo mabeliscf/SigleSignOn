@@ -19,7 +19,7 @@ namespace QRA.Entities.oktaModels
         public string lastName { get; set; } = null!;
         public string email { get; set; } = null!;
         public string login { get; set; } = null!;
-        public string mobilePhone { get; set; } = null!;
+      //  public string mobilePhone { get; set; } = null!;
     }
 
 
